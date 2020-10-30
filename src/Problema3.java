@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class Problema3 {
-
+//Sin terminar
     private static int[] dependiente(int[] cosa) {
         int salarioMensual;
         int dependiente;
