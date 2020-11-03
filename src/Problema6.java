@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class Problema6 {
 
     public static void main(String[] args) {
+        //Variables para poder calcular las areas
 
         String figura;
-        
 
         double n;
 
@@ -15,7 +15,9 @@ public class Problema6 {
 
         double pi = 3.1416;
         double r;
+        //iniciamos un ciclo while, sin fin para que el usuario lo pueda utilizar las veces que desee
         while (true) {
+            //inicializa el area segun el nombre de cada figura
             Scanner entrada = new Scanner(System.in);
             System.out.println("\nIndique el nombre de la figura a la cuál le desea sacar el área: ");
             figura = entrada.next();
