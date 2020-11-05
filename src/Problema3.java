@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Problema3 {
 
     private static double calcularImpuesto(int dependiente, double salarioMensual) {
-        double salarioGravable = 0;
-        double montoImpuesto = 0;
+        double salarioGravable ;
+        double montoImpuesto ;
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduce el número de dependientes: ");
         dependiente = entrada.nextInt();
