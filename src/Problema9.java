@@ -2,84 +2,70 @@
 import java.util.Scanner;
 
 public class Problema9 {
-
-    static int[] estudiante;
-    
-    static int maxEstudiante = 5;
-    static int estudiantes;
-
-    public static int registro(int carnet, int nota) {
+public static void main(String[] args) {
         int menu;
-       
-        System.out.println("1.Agregar una nota.");
-        System.out.println("2.Eliminar una nota.");
-        System.out.println("3.Mostrar las notas registradas.");
-        System.out.println("Ingrese la opción que desea: ");
-        Scanner entrada = new Scanner(System.in);
+        int nota;
+        int carnet;
+        int estudiante = 0;
 
-        menu = entrada.nextInt();
+        int[] notas = new int[5];
+        int[] carnets = new int[5];
+        for (int i = 0; i < carnets.length; i++) {
+            carnets[i] = 0;
+            notas[i] = 0;
+        }
 
-       if (menu==1){
-                System.out.println("1.Agregar una nota.");
-                Scanner entrada1 = new Scanner(System.in);
-                System.out.println("Ingresa el carnet del estudiante: ");
-                carnet = entrada1.nextInt();
-                
+        while (true) {
+            System.out.println("1.Agregar una nota.");
+            System.out.println("2.Eliminar una nota.");
+            System.out.println("3.Mostrar las notas registradas.");
+            System.out.println("4.salir.");
+            System.out.println("Ingrese la opción que desea: ");
+            Scanner entrada = new Scanner(System.in);
+            menu = entrada.nextInt();
+            switch (menu) {
+                case 1:
+                    System.out.println("1.Agregar una nota.");
+                    System.out.println("Agregue el carnet del estudiante: ");
+                    Scanner entrada2 = new Scanner(System.in);
+                    carnet = entrada2.nextInt();
+                    carnets[estudiante] = carnet;
 
-                for (int i = 0; i <= maxEstudiante; i++) {
+                    System.out.println("El carnet del estudiante es: ");
+                    System.out.println(carnet);
 
-                    estudiante[i] = carnet;}
-                Scanner entrada2 = new Scanner(System.in);
-                System.out.println("Ingresa su nota: ");
-                nota = entrada2.nextInt();
-                
+                    System.out.println("Agregue la nota del estudiante: ");
+                    Scanner entrada1 = new Scanner(System.in);
+                    nota = entrada1.nextInt();
+                    notas[estudiante] = nota;
+                    System.out.println("La nota del estudiante es: ");
+                    System.out.println(nota);
+                    estudiante = estudiante + 1;
+                    break;
 
-                for (int j = 0; j <= maxEstudiante; j++) {
+                case 2:
+                    System.out.println("2.Eliminar una nota.");
+                    estudiante = estudiante - 1;
+                    carnets[estudiante] = 0;
+                    notas[estudiante] = 0;
+                    break;
+                case 3:
+                    System.out.println("3.Mostrar las notas registradas.");
+                    for (int i = 0; i < carnets.length; i++) {
 
-                    estudiante[j] = nota;
-                }
-       }
-                
-                if (menu==2){
-                System.out.println("2.Eliminar una nota.");
-                Scanner entrada3 = new Scanner(System.in);
-                System.out.println("Ingresa el carnet del estudiante: ");
-                carnet = entrada3.nextInt();
-                for (int k = 0; k <= maxEstudiante; k--) {
+                        System.out.println(carnets[i]);
+                        System.out.println(notas[i]);
+                    }
+                    break;
+                case 4:
 
-                    estudiante[k] -= carnet;
-                    estudiante[k] -= nota;
-                
-                }
-                if (menu==3){
-                System.out.println("2.Eliminar una nota.");
-                Scanner entrada5 = new Scanner(System.in);
-                System.out.println("Ingresa el carnet del estudiante: ");
-                carnet = entrada5.nextInt();
-                Scanner entrada6 = new Scanner(System.in);
-                System.out.println("Ingresa su nota: ");
-                nota = entrada6.nextInt();
-                }
-       
-         
+                    break;
+                default:
+                    System.out.println("Opción incorrecta.");
+                    break;
+
+            }
 
         }
-                
-       
-       return estudiantes;
-    }
-    
-    public static void main (String[] args){
-        int carnet=0;
-        int nota=0;
-         double resultadoImpuesto;
-        resultadoImpuesto = registro(carnet, nota);
-        System.out.print("El monto a pagar es de: "+resultadoImpuesto);
-       //  int[] carnet = new int[4];
-          //for (int i = 0; i < 4; i++) {
-//
-           // System.out.println("Ingresa el " + i + " numero:");
-         //   carnet[i] = .nextInt();
     }
 }
-
