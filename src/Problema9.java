@@ -2,11 +2,12 @@
 import java.util.Scanner;
 
 public class Problema9 {
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
         int menu;
         int nota;
         int carnet;
-        int estudiante = 0;
+        int estudiante =0;
 
         int[] notas = new int[5];
         int[] carnets = new int[5];
@@ -25,6 +26,10 @@ public static void main(String[] args) {
             menu = entrada.nextInt();
             switch (menu) {
                 case 1:
+                    if(estudiante==5){
+                        System.out.println("Se alcanzó el número máximo de estudiantes.");
+                    }
+                    else if(estudiante!=5){
                     System.out.println("1.Agregar una nota.");
                     System.out.println("Agregue el carnet del estudiante: ");
                     Scanner entrada2 = new Scanner(System.in);
@@ -40,7 +45,7 @@ public static void main(String[] args) {
                     notas[estudiante] = nota;
                     System.out.println("La nota del estudiante es: ");
                     System.out.println(nota);
-                    estudiante = estudiante + 1;
+                    estudiante = estudiante + 1;}
                     break;
 
                 case 2:
@@ -50,11 +55,20 @@ public static void main(String[] args) {
                     notas[estudiante] = 0;
                     break;
                 case 3:
-                    System.out.println("3.Mostrar las notas registradas.");
-                    for (int i = 0; i < carnets.length; i++) {
+                    if (estudiante == 0) {
+                        System.out.println("No hay estudiantes registrados.");
+                    } else if (estudiante != 0) {
+                        System.out.println("3.Mostrar las notas registradas.");
 
-                        System.out.println(carnets[i]);
-                        System.out.println(notas[i]);
+                        for (int i = 0; i < carnets.length; i++) {
+
+                            if (carnets[i] != 0) {
+                                System.out.println("Carnet: " + carnets[i]);
+                            }
+                            if (notas[i] != 0) {
+                                System.out.println("Nota: " + notas[i]);
+                            }
+                        }
                     }
                     break;
                 case 4:
