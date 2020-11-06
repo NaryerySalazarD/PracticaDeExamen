@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+
+
 public class Problema3 {
 
     private static double calcularImpuesto(int dependiente, double salarioMensual) {
