@@ -4,18 +4,20 @@ import java.util.Scanner;
 public class Problema9 {
 
     public static void main(String[] args) {
+        //variables nombradas
         int menu;
         int nota;
         int carnet;
         int estudiante =0;
-
+        
         int[] notas = new int[5];
         int[] carnets = new int[5];
+        //lleno mis variables con "0"
         for (int i = 0; i < carnets.length; i++) {
             carnets[i] = 0;
             notas[i] = 0;
         }
-
+        //ciclo para el menú y su configuración
         while (true) {
             System.out.println("1.Agregar una nota.");
             System.out.println("2.Eliminar una nota.");

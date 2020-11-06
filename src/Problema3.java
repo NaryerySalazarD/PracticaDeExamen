@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 
 public class Problema3 {
-
+ //clase para calcular el impuesto
     private static double calcularImpuesto(int dependiente, double salarioMensual) {
+        //variables nombradas
         double salarioGravable ;
         double montoImpuesto ;
+        //pido los datos
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduce el número de dependientes: ");
         dependiente = entrada.nextInt();
         Scanner entrada1 = new Scanner(System.in);
         System.out.print("Introduce tu salario: ");
         salarioMensual = entrada1.nextInt();
+        //condiciones para el salario gravable
         switch (dependiente) {
             case 1:
                 System.out.println("\nSu salario es gravable en un 100%.");
@@ -36,7 +39,7 @@ public class Problema3 {
                 salarioGravable = salarioMensual * 0.4;
                 break;
         }
-
+        //condiciones para el IR
         if (salarioGravable < 200000) {
             System.out.println("\nSu impuesto sobre la renta es de un 0% sobre su salario gravable, el cual es de " + salarioGravable);
             montoImpuesto = salarioGravable * 0;

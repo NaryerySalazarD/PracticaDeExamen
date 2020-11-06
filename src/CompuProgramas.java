@@ -3,6 +3,7 @@ public class CompuProgramas {
 
     public static void main(String[] args) {
         //primer compugrama
+        System.out.println("primer compugrama");
         int n = 5;
         for (int i = 0; i <= n - n; i++) {
             for (int j = 0; j < n - 1; j++) {
@@ -15,6 +16,7 @@ public class CompuProgramas {
         }
         System.out.println();
         //segundo compugrama
+        System.out.println("segundo compugrama");
         int m = 5;
         for (int i = 0; i < m - 2; i++) {
             for (int j = 0; j < m - 1; j++) {
@@ -26,6 +28,7 @@ public class CompuProgramas {
             System.out.println();
         }
         //tercer compugrama
+        System.out.println("tercer compugrama");
         int l = 5;
         //línea superior
         for (int i = 0; i < l; i++) {
@@ -49,6 +52,7 @@ public class CompuProgramas {
         }
              System.out.println();
           //cuarto compugrama
+          System.out.println("cuarto compugrama");
            //línea superior
         for (int i = 0; i < l; i++) {
             System.out.print("*");
@@ -90,6 +94,7 @@ public class CompuProgramas {
            System.out.println();
            
            //quinto compugrama
+           System.out.println("quinto compugrama");
            //línea superior
         for (int i = 0; i < l; i++) {
             System.out.print("*");
@@ -131,6 +136,7 @@ public class CompuProgramas {
         }
            System.out.println();
            //sexto compugrama
+            System.out.println("sexto compugrama");
            //línea superior
         for (int i = 0; i < l; i++) {
             System.out.print("*");
