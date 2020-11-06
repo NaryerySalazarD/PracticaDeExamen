@@ -2,9 +2,6 @@
 import java.util.Scanner;
 
 
-
-
-
 public class Problema4 {
     public  static  boolean  biciesto ( int  anno ) {
         //nombra los valores
