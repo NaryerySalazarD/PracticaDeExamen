@@ -8,8 +8,8 @@ public class Problema9 {
         int menu;
         int nota;
         int carnet;
-        int estudiante =0;
-        
+        int estudiante = 0;
+
         int[] notas = new int[5];
         int[] carnets = new int[5];
         //lleno mis variables con "0"
@@ -22,32 +22,32 @@ public class Problema9 {
             System.out.println("1.Agregar una nota.");
             System.out.println("2.Eliminar una nota.");
             System.out.println("3.Mostrar las notas registradas.");
-            System.out.println("4.salir.");
+
             System.out.println("Ingrese la opción que desea: ");
             Scanner entrada = new Scanner(System.in);
             menu = entrada.nextInt();
             switch (menu) {
                 case 1:
-                    if(estudiante==5){
+                    if (estudiante == 5) {
                         System.out.println("Se alcanzó el número máximo de estudiantes.");
+                    } else if (estudiante != 5) {
+                        System.out.println("1.Agregar una nota.");
+                        System.out.println("Agregue el carnet del estudiante: ");
+                        Scanner entrada2 = new Scanner(System.in);
+                        carnet = entrada2.nextInt();
+                        carnets[estudiante] = carnet;
+
+                        System.out.println("El carnet del estudiante es: ");
+                        System.out.println(carnet);
+
+                        System.out.println("Agregue la nota del estudiante: ");
+                        Scanner entrada1 = new Scanner(System.in);
+                        nota = entrada1.nextInt();
+                        notas[estudiante] = nota;
+                        System.out.println("La nota del estudiante es: ");
+                        System.out.println(nota);
+                        estudiante = estudiante + 1;
                     }
-                    else if(estudiante!=5){
-                    System.out.println("1.Agregar una nota.");
-                    System.out.println("Agregue el carnet del estudiante: ");
-                    Scanner entrada2 = new Scanner(System.in);
-                    carnet = entrada2.nextInt();
-                    carnets[estudiante] = carnet;
-
-                    System.out.println("El carnet del estudiante es: ");
-                    System.out.println(carnet);
-
-                    System.out.println("Agregue la nota del estudiante: ");
-                    Scanner entrada1 = new Scanner(System.in);
-                    nota = entrada1.nextInt();
-                    notas[estudiante] = nota;
-                    System.out.println("La nota del estudiante es: ");
-                    System.out.println(nota);
-                    estudiante = estudiante + 1;}
                     break;
 
                 case 2:
@@ -73,9 +73,7 @@ public class Problema9 {
                         }
                     }
                     break;
-                case 4:
 
-                    break;
                 default:
                     System.out.println("Opción incorrecta.");
                     break;
