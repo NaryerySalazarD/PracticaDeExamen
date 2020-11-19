@@ -21,38 +21,47 @@ public class TEstudiante {
     }
 
     public void agregarNota() {
-        System.out.println("1.Agregar una nota.");
-        System.out.println("Agregue el carnet del estudiante: ");
+        if (estudiante == 5) {
+            System.out.println("Se alcanzó el número máximo de estudiantes.");
+        } else if (estudiante <= 5) {
+            System.out.println("1.Agregar una nota.");
+            System.out.println("Agregue el carnet del estudiante: ");
 
-        carnet = entrada.nextInt();
-        carnets[estudiante] = carnet;
-        System.out.println("El carnet del estudiante es: ");
-        System.out.println(carnet);
+            carnet = entrada.nextInt();
+            carnets[estudiante] = carnet;
+            System.out.println("El carnet del estudiante es: ");
+            System.out.println(carnet);
 
-        System.out.println("Agregue la nota del estudiante: ");
+            System.out.println("Agregue la nota del estudiante: ");
 
-        nota = entrada.nextInt();
-        notas[estudiante] = nota;
-        System.out.println("La nota del estudiante es: ");
-        System.out.println(nota);
-        estudiante = estudiante + 1;
+            nota = entrada.nextInt();
+            notas[estudiante] = nota;
+            System.out.println("La nota del estudiante es: ");
+            System.out.println(nota);
+            estudiante = estudiante + 1;
+        }
     }
 
-    public void eliminarNota(){
+    public void eliminarNota() {
         System.out.println("2.Eliminar una nota.");
-                    estudiante = estudiante - 1;
-                    carnets[estudiante] = 0;
-                    notas[estudiante] = 0;
+        estudiante = estudiante - 1;
+        carnets[estudiante] = 0;
+        notas[estudiante] = 0;
     }
-    public void notasRegistradas() {
-         System.out.println("3.Mostrar las notas registradas.");
-        for (int i = 0; i < carnets.length; i++) {
 
-            if (carnets[i] != 0) {
-                System.out.println("Carnet: " + carnets[i]);
-            }
-            if (notas[i] != 0) {
-                System.out.println("Nota: " + notas[i]);
+    public void notasRegistradas() {
+        if (estudiante == 0) {
+            System.out.println("No hay estudiantes registrados.");
+        } else if (estudiante != 0) {
+            System.out.println("3.Mostrar las notas registradas.");
+            for (int i = 0; i < carnets.length; i++) {
+
+                if (carnets[i] != 0) {
+                    System.out.println("Carnet: " + carnets[i]);
+                }
+                if (notas[i] != 0) {
+                    System.out.println("Nota: " + notas[i]);
+                }
             }
         }
     }
