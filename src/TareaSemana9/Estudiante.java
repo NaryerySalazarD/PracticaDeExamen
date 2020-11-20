@@ -36,7 +36,7 @@ public class Estudiante {
     public void agregarNota() {
         if (estudiante == 5) {
             System.out.println("Se alcanzó el número máximo de estudiantes.");
-        } else if (estudiante <= 5) {
+        } else if (estudiante < 5) {
             System.out.println("1.Agregar una nota.");
             System.out.println("Agregue el carnet del estudiante: ");
 
