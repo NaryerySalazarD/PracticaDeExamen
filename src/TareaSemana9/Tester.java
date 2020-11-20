@@ -1,10 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package TareaSemana9;
 
-public class TesterTareaSemana9 {
 
-    public static void main(String args[]) {
-        TEstudiante e = new TEstudiante();
-        TMenu menu = new TMenu();
-        TMenu opcion = new TMenu();
+
+/**
+ *
+ * @NaryerySD
+ */
+public class Tester {
+     public static void main(String args[]) {
+        Estudiante e = new Estudiante();
+        Menu menu = new Menu();
+        Menu opcion = new Menu();
         while (true) {
 
             menu.opcionesMenu();
