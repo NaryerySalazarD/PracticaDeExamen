@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class Examen {
       Alumno alumno;

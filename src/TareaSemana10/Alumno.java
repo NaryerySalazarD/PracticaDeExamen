@@ -7,7 +7,7 @@ package TareaSemana10;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class Alumno {
     String nombre;
