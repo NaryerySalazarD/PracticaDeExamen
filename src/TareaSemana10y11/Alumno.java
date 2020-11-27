@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TareaSemana10;
+package TareaSemana10y11;
+
+
 
 /**
  *
@@ -13,6 +15,15 @@ public class Alumno {
     String nombre;
     String apellido;
     int carne;
+    PadreFamiliar padre;
+
+    public PadreFamiliar getPadre() {
+        return padre;
+    }
+
+    public void setPadre(PadreFamiliar padre) {
+        this.padre = padre;
+    }
     
     public Alumno(){
     }
@@ -22,6 +33,13 @@ public class Alumno {
         this.apellido = apellido;
         this.carne = carne;
     }
+    
+    
+    public void Alumno(PadreFamiliar padre){
+      this.padre=padre;
+    }
+    
+   
     
     
     public void mostrardatos(){
