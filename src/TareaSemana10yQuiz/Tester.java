@@ -36,13 +36,12 @@ public class Tester {
                    
 
                     Alumno alum = new Alumno(x, y, z);
-                    System.out.println("Digite el nombre del alumno:");
+                    System.out.println("Digite el nombre del padre:");
                     String nombre = s.next();
-                    System.out.println("Digite el apellido del alumno:");
+                    System.out.println("Digite el apellido del padre:");
                     String apellido = s.next();
-                    System.out.println("Digite el carne:");
-                    boolean encargado = s.hasNext();
-                    PadreFamiliar padre=new PadreFamiliar(nombre,apellido,encargado);
+                    
+                    PadreFamiliar padre=new PadreFamiliar(nombre,apellido);
                    
                     
                     pad.Alumno(padre);

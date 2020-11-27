@@ -12,19 +12,21 @@ package TareaSemana10yQuiz;
 public class PadreFamiliar {
     String nombre;
     String apellido;
-    boolean encargado;
+   
     
     public PadreFamiliar(){
     
 }
 
-    public PadreFamiliar(String nombre, String apellido, boolean encargado) {
+    public PadreFamiliar(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.encargado = encargado;
+       
     }
-    public void datosPadre(){
-        System.out.println(nombre+apellido+encargado);
+
+    @Override
+    public String toString() {
+        return "PadreFamiliar{" + "nombre=" + nombre + ", apellido=" + apellido + '}';
     }
     
 
@@ -44,13 +46,8 @@ public class PadreFamiliar {
         this.apellido = apellido;
     }
 
-    public boolean isEncargado() {
-        return encargado;
-    }
-
-    public void setEncargado(boolean encargado) {
-        this.encargado = encargado;
-    }
+   
+    
     
     
 }
