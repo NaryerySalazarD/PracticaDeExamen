@@ -16,6 +16,20 @@ public class Alumno {
     String apellido;
     int carne;
     PadreFamiliar padre;
+    PadreFamiliar madre;
+
+    public PadreFamiliar getMadre() {
+        return madre;
+    }
+
+    public void setMadre(PadreFamiliar madre) {
+        this.madre = madre;
+    }
+
+    public Alumno(PadreFamiliar madre) {
+        this.madre = madre;
+    }
+    
 
     public PadreFamiliar getPadre() {
         return padre;
@@ -35,8 +49,16 @@ public class Alumno {
     }
     
     
-    public void Alumno(PadreFamiliar padre){
-      this.padre=padre;
+   public void imprimirPadreFamiliar(){
+        System.out.println(padre.getNombre() + " " + padre.getApellido());
+        System.out.println(padre); 
+    }    
+
+    public Alumno(String nombre, String apellido, int carne, PadreFamiliar padre) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.carne = carne;
+        this.padre = padre;
     }
     
    
@@ -45,7 +67,7 @@ public class Alumno {
     public void mostrardatos(){
         System.out.println("El nombre del alumno es:"+nombre+", El apellido del alumno es:"+apellido+". El carne del alumno es:"+ carne);
     }
-    
+   
     //metodos gets y sets
 
     public String getNombre() {
@@ -71,6 +93,12 @@ public class Alumno {
     public void setCarne(int carne) {
         this.carne = carne;
     }
-    
+       public PadreFamiliar getpadre() {
+        return padre;
+    }
+
+    public void setPadreFamiliar (PadreFamiliar padre) {
+        this.padre = padre;
+    }
 }
 

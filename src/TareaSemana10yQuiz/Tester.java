@@ -18,7 +18,7 @@ public class Tester {
         Menu opcion = new Menu();
         SistemaNotas sistema = new SistemaNotas();
         Scanner s = new Scanner(System.in);
-        Alumno pad=new Alumno();
+      
         
 
         while (true) {
@@ -36,26 +36,36 @@ public class Tester {
                    
 
                     Alumno alum = new Alumno(x, y, z);
-                    System.out.println("Digite el nombre del padre:");
-                    String nombre = s.next();
-                    System.out.println("Digite el apellido del padre:");
-                    String apellido = s.next();
-                    
-                    PadreFamiliar padre=new PadreFamiliar(nombre,apellido);
-                   
-                    
-                    pad.Alumno(padre);
-                    System.out.println(padre);
-
-                    System.out.println("Digite la nota obtenida:");
+                     System.out.println("Digite la nota obtenida:");
                     int nota = s.nextInt();
                     System.out.println("Digite puntos totales:");
                     int puntosTotales = s.nextInt();
                     System.out.println("Digite puntos obtenidos:");
                     int puntosObtenidos = s.nextInt();
-
+                    //Padre familiar
+            System.out.println("Digite nombre padre:");
+            String nombrePadre = s.next();
+            System.out.println("Digite apellidos padre:");
+            String apellidosPadre = s.next();
+            
+            PadreFamiliar p1 = new PadreFamiliar(nombrePadre,apellidosPadre);
+            alum.setPadre(p1);
+                   
+                    
                     Examen e = new Examen(alum, nota, puntosTotales,
                             puntosObtenidos, null);
+                     if(sistema.agregarEx(e)){
+            
+                System.out.println(e.getNota());
+                System.out.println(e.getPuntosObtenidos());
+                //e.alumno.imprimirPadreFamiliar();
+                e.getAlumno().imprimirPadreFamiliar();
+
+                sistema.mostrarExamenes();
+            }
+            else{
+                System.out.println("No hay suficiente espacio.");
+            }
 
                     sistema.agregarEx(e);
                     break;
