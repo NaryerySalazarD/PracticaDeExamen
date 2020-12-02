@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TareaSemana10yQuiz;
+package TareasyQuiz;
 
 
 
@@ -50,8 +50,10 @@ public class Alumno {
     
     
    public void imprimirPadreFamiliar(){
-        System.out.println(padre.getNombre() + " " + padre.getApellido());
-        System.out.println(padre); 
+        System.out.println(padre.getNombrePadre()+ " " + padre.getApellidoPadre());
+        System.out.println(padre);
+         System.out.println(madre.getNombreMadre() + " " + madre.getApellidoMadre());
+        System.out.println(madre);
     }    
 
     public Alumno(String nombre, String apellido, int carne, PadreFamiliar padre) {
