@@ -13,26 +13,58 @@ import java.util.Scanner;
  */
 public class Euro {
 
-    float unidades;
-     Scanner entrada = new Scanner(System.in);
+    String moneda;
+
+    private double monedaDestino;
+    private float unidades;
+    private final double tasa2 = 1.53;//1 euro son 1.53 dólares
+    private float tasa3 = 765;//1 euro son 765 colones
+    Scanner entrada = new Scanner(System.in);
 
     public Euro() {
 
     }
-     public void valorMonedaOrigen() {
-        System.out.println("Introduzca la cantidad de unidades de su moneda de origen:");
-        unidades = entrada.nextFloat();
-        System.out.println(unidades + " euros.");
 
-    }
-
-    @Override
-    public String toString() {
-        return "Euro{" + "unidades=" + unidades + ", entrada=" + entrada + '}';
-    }
-     
-    public Euro(float unidades) {
+    public Euro(String moneda, double monedaDestino, float unidades) {
+        this.moneda = moneda;
+        this.monedaDestino = monedaDestino;
         this.unidades = unidades;
+    }
+
+    public String Moneda() {
+        System.out.println("¿Cuál es su moneda de origen?");
+        moneda = entrada.next();
+        return moneda;
+    }
+
+    public void ConvertorEuro_Dolar() {
+        monedaDestino = unidades * tasa2;
+    }
+
+    public void ConvertorEuro_colon() {
+        monedaDestino = unidades * tasa3;
+    }
+
+    public void ValorMonedaOrigen() {
+        System.out.println("Introduzca la cantidad de unidades de su moneda:");
+        unidades = entrada.nextFloat();
+
+    }
+
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
+
+    public double getMonedaDestino() {
+        return monedaDestino;
+    }
+
+    public void setMonedaDestino(double monedaDestino) {
+        this.monedaDestino = monedaDestino;
     }
 
     public float getUnidades() {
@@ -43,6 +75,14 @@ public class Euro {
         this.unidades = unidades;
     }
 
+    public float getTasa3() {
+        return tasa3;
+    }
+
+    public void setTasa3(float tasa3) {
+        this.tasa3 = tasa3;
+    }
+
     public Scanner getEntrada() {
         return entrada;
     }
@@ -50,8 +90,5 @@ public class Euro {
     public void setEntrada(Scanner entrada) {
         this.entrada = entrada;
     }
-     
-
-    
 
 }

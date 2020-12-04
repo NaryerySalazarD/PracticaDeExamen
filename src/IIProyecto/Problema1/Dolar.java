@@ -12,42 +12,41 @@ import java.util.Scanner;
  * @author NaryerySD
  */
 public class Dolar {
+
     String moneda;
-    double tasa=1.53;//1 euro equivale a 1.53 dólares.
     private float monedaOrigen;
-    private float monedaDestino;
+    private double monedaDestino;
     private float unidades;
-     Scanner entrada = new Scanner(System.in);
-     
-     public Dolar(){
-         
-     }
-     
-       public void conversor() {
-        monedaDestino = (float) (monedaOrigen * tasa);
-        System.out.println(monedaDestino);
+    private final float tasa1 = 500;//1 dolar son 500 colones
+    private final double tasa2 = 1.53;//1 euro son 1.53 dólares
+    Scanner entrada = new Scanner(System.in);
+
+   
+
+    public Dolar() {
 
     }
-        public void valorMonedaOrigen() {
-        System.out.println("Introduzca la cantidad de unidades de su moneda de origen:");
-        unidades = entrada.nextFloat();
-        System.out.println(unidades + " dólares.");
 
-    }
-      
-
-    public Dolar(String moneda, float monedaOrigen, float monedaDestino, float unidades) {
+    public Dolar(String moneda, float monedaOrigen, double monedaDestino, float unidades) {
         this.moneda = moneda;
         this.monedaOrigen = monedaOrigen;
         this.monedaDestino = monedaDestino;
         this.unidades = unidades;
     }
 
-    @Override
-    public String toString() {
-        return "Dolar{" + "moneda=" + moneda + ", tasa=" + tasa + ", monedaOrigen=" + monedaOrigen + ", monedaDestino=" + monedaDestino + ", unidades=" + unidades + ", entrada=" + entrada + '}';
+    public void ConvertorDolar_colon() {
+        monedaDestino = unidades * tasa1;
     }
-    
+
+    public void ConvertorDolar_euro() {
+        monedaDestino = unidades / tasa2;
+    }
+
+    public void ValorMonedaOrigen() {
+        System.out.println("Introduzca la cantidad de unidades de su moneda:");
+        unidades = entrada.nextFloat();
+
+    }
 
     public String getMoneda() {
         return moneda;
@@ -55,14 +54,6 @@ public class Dolar {
 
     public void setMoneda(String moneda) {
         this.moneda = moneda;
-    }
-
-    public double getTasa() {
-        return tasa;
-    }
-
-    public void setTasa(double tasa) {
-        this.tasa = tasa;
     }
 
     public float getMonedaOrigen() {
@@ -73,11 +64,11 @@ public class Dolar {
         this.monedaOrigen = monedaOrigen;
     }
 
-    public float getMonedaDestino() {
+    public double getMonedaDestino() {
         return monedaDestino;
     }
 
-    public void setMonedaDestino(float monedaDestino) {
+    public void setMonedaDestino(double monedaDestino) {
         this.monedaDestino = monedaDestino;
     }
 
@@ -96,5 +87,5 @@ public class Dolar {
     public void setEntrada(Scanner entrada) {
         this.entrada = entrada;
     }
-       
+
 }

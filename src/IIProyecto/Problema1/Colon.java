@@ -13,62 +13,67 @@ import java.util.Scanner;
  */
 public class Colon {
 
-    String moneda;
-    private float tasa = 500;//1 dolar equivale a 500 colones.
+    private final float tasaDolar = 500;//1 dolar equivale a 500 colones.
+    private final float tasaEuro = 765;//1 euro equivale a 765 colones.
     private float monedaOrigen;
     private float monedaDestino;
     private float unidades;
+
     Scanner entrada = new Scanner(System.in);
 
     public Colon() {
 
     }
 
-    public Colon(String moneda, float tasa, float monedaOrigen, float monedaDestino) {
-        this.moneda = moneda;
-        this.tasa = tasa;
+    public Colon(float monedaOrigen, float monedaDestino, float unidades) {
         this.monedaOrigen = monedaOrigen;
+        this.monedaDestino = monedaDestino;
+        this.unidades = unidades;
+    }
+
+    public void ConvertorColon_Dolar() {
+        monedaDestino = unidades / tasaDolar;
+    }
+
+    public void ConvertorColon_Euro() {
+        monedaDestino = unidades / tasaEuro;
+    }
+
+    public void ValorMonedaOrigen() {
+        System.out.println("Introduzca la cantidad de unidades de su moneda:");
+        unidades = entrada.nextFloat();
+    }
+
+    public float getMonedaOrigen() {
+        return monedaOrigen;
+    }
+
+    public void setMonedaOrigen(float monedaOrigen) {
+        this.monedaOrigen = monedaOrigen;
+    }
+
+    public float getMonedaDestino() {
+        return monedaDestino;
+    }
+
+    public void setMonedaDestino(float monedaDestino) {
         this.monedaDestino = monedaDestino;
     }
 
-    public void valorMonedaOrigen() {
-        System.out.println("Introduzca la cantidad de unidades de su moneda de origen:");
-        unidades = entrada.nextFloat();
-        System.out.println(unidades + "colones.");
-
-    }
-     public void valorMonedaDestino() { 
-        System.out.println("Introduzca la cantidad de unidades de su moneda destino:");
-        unidades = entrada.nextFloat();
-        System.out.println(unidades + "colones.");
-
+    public float getUnidades() {
+        return unidades;
     }
 
-    public void conversor() {
-        monedaDestino = monedaOrigen * tasa;
-        System.out.println(monedaDestino);
-
+    public void setUnidades(float unidades) {
+        this.unidades = unidades;
     }
 
-    @Override
-    public String toString() {
-        return "Colon{" + "moneda=" + moneda + ", tasa=" + tasa + ", monedaOrigen=" + monedaOrigen + ", monedaDestino=" + monedaDestino + '}';
+    public Scanner getEntrada() {
+        return entrada;
     }
 
-    public String getMoneda() {
-        return moneda;
-    }
-
-    public void setMoneda(String moneda) {
-        this.moneda = moneda;
-    }
-
-    public Float getTasa() {
-        return tasa;
-    }
-
-    public void setTasa(Float tasa) {
-        this.tasa = tasa;
+    public void setEntrada(Scanner entrada) {
+        this.entrada = entrada;
     }
 
 }

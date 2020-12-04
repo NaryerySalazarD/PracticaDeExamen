@@ -5,63 +5,52 @@
  */
 package IIProyecto.Problema1;
 
-import java.util.Scanner;
+/*
 
-/**
- *
- * @author gigabyte
  */
 public class Tester {
-     public static void main(String args[]) {
-        Moneda origen=new Moneda();
-        Moneda destino=new Moneda();
-        Colon valorOrigen=new Colon();
 
-        
-        System.out.println("Seleccione su moneda de origen:");
-        System.out.println("1.Mi moneda de origen son los colones.");
-        System.out.println("2.Mi moneda de origen son los dólares.");
-        System.out.println("3.Mi moneda de origen son los euros.");
-         Scanner entrada = new Scanner(System.in);
-        int menu=entrada.nextInt();
-        switch(menu){
-            case 1:
-            
-            valorOrigen.valorMonedaOrigen(); 
-            break;
-            case 2:
-                Dolar valorOrigen1=new Dolar();
-                valorOrigen1.valorMonedaOrigen();
-                break;
-            case 3:
-                Euro valorOrigen2=new Euro();
-                valorOrigen2.valorMonedaOrigen();
-        }
-         System.out.println("Seleccione su moneda de destino:");
-        System.out.println("1.Mi moneda de destino son los colones.");
-        System.out.println("2.Mi moneda de destino son los dólares.");
-        System.out.println("3.Mi moneda de destino son los euros.");
-      
-        menu=entrada.nextInt();
-        switch(menu){
-            case 1:
-            Colon monedaDestino=new Colon();
-            monedaDestino.conversor();
-            break;
-            case 2:
-                Dolar monedaDestino1=new Dolar();
-                monedaDestino1.valorMonedaOrigen();
-                break;
-            case 3:
-                Euro monedaDestino2=new Euro();
-                monedaDestino2.valorMonedaOrigen();
-        }
-        System.out.println(valorOrigen);
-        
-        
-       
-           
-         }
-         
-     }
+    public static void main(String args[]) {
+        Colon moneda1 = new Colon();
+        Dolar moneda2 = new Dolar();
+        Euro moneda3 = new Euro();
+        Moneda moneda = new Moneda();
 
+        moneda.Moneda();
+        switch (moneda.getMonedaOrigen()) {
+            case "colones":
+                moneda1.ValorMonedaOrigen();
+                System.out.println(moneda1.getUnidades() + "colones.");
+                break;
+            case "dolares":
+                moneda2.ValorMonedaOrigen();
+                System.out.println(moneda2.getUnidades() + "dólares.");
+                break;
+            default:
+                moneda3.ValorMonedaOrigen();
+                System.out.println(moneda3.getUnidades() + "euros.");
+                break;
+        }
+        moneda.MonedaDestino();
+        if (moneda.getMonedaOrigen().equals("colones") && moneda.getMonedaDestino().equals("dolares")) {
+            moneda1.ConvertorColon_Dolar();
+            System.out.println(moneda1.getUnidades() + "colones son " + moneda1.getMonedaDestino() + "dolares.");
+        } else if (moneda.getMonedaOrigen().equals("colones") && moneda.getMonedaDestino().equals("euros")) {
+            moneda1.ConvertorColon_Euro();
+            System.out.println(moneda1.getUnidades() + "colones son " + moneda1.getMonedaDestino() + "euros.");
+        } else if (moneda.getMonedaOrigen().equals("dolares") && moneda.getMonedaDestino().equals("colones")) {
+            moneda2.ConvertorDolar_colon();
+            System.out.println(moneda2.getUnidades() + "dolares son " + moneda2.getMonedaDestino() + "colones.");
+        } else if (moneda.getMonedaOrigen().equals("dolares") && moneda.getMonedaDestino().equals("euros")) {
+            moneda2.ConvertorDolar_euro();
+            System.out.println(moneda2.getUnidades() + "dolares son " + moneda2.getMonedaDestino() + "euros.");
+        } else if (moneda.getMonedaOrigen().equals("euros") && moneda.getMonedaDestino().equals("colones")) {
+            moneda3.ConvertorEuro_colon();
+            System.out.println(moneda3.getUnidades() + "euros son " + moneda3.getMonedaDestino() + "colones.");
+        } else {
+            moneda3.ConvertorEuro_Dolar();
+            System.out.println(moneda3.getUnidades() + "euros son " + moneda3.getMonedaDestino() + "dolares.");
+        }
+
+    }
+}

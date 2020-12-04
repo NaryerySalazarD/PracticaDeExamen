@@ -13,27 +13,45 @@ import java.util.Scanner;
  */
 public class Moneda {
 
-    String moneda;
+    private String monedaOrigen;
+    private String monedaDestino;
+
     Scanner entrada = new Scanner(System.in);
- 
-    public Moneda() {
 
+    public String Moneda() {
+        System.out.println("¿Cuál es su moneda de origen?");
+        monedaOrigen = entrada.next();
+        return monedaOrigen;
     }
 
-   
-
-   
-
-    public Moneda(String moneda) {
-        this.moneda = moneda;
+    public String MonedaDestino() {
+        System.out.println("¿Cuál es su moneda destino?");
+        monedaDestino = entrada.next();
+        return monedaDestino;
     }
 
-    public String getMoneda() {
-        return moneda;
+    public String getMonedaOrigen() {
+        return monedaOrigen;
     }
 
-    public void setMoneda(String moneda) {
-        this.moneda = moneda;
+    public void setMonedaOrigen(String monedaOrigen) {
+        this.monedaOrigen = monedaOrigen;
+    }
+
+    public String getMonedaDestino() {
+        return monedaDestino;
+    }
+
+    public void setMonedaDestino(String monedaDestino) {
+        this.monedaDestino = monedaDestino;
+    }
+
+    public Scanner getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(Scanner entrada) {
+        this.entrada = entrada;
     }
 
 }
