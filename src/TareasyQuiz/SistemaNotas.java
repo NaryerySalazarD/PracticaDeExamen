@@ -13,9 +13,12 @@ public class SistemaNotas {
      int maxRegistros=100;
     Examen[] examenes = new Examen[maxRegistros];
     int cont=0;
-    
-    public SistemaNotas(){
+
+    public SistemaNotas() {
     }
+    
+   
+    
     
     //elimina el ult examen del arreglo
     public boolean eliminarEx(){

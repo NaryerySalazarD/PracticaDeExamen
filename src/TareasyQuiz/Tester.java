@@ -22,6 +22,8 @@ public class Tester {
         while (true) {
             menu.opcionesMenu();
             opcion.ingresarOpcion();
+           
+            
             switch (opcion.opcion) {
                 case 1:
 
@@ -50,7 +52,7 @@ public class Tester {
                     String apellidosMadre = s.next();
 
                     PadreFamiliar p1 = new PadreFamiliar(nombrePadre, apellidosPadre,nombreMadre,apellidosMadre);
-                    alum.setPadre(p1);
+                    
                    
 
                     Examen e = new Examen(alum, nota, puntosTotales,
@@ -59,27 +61,21 @@ public class Tester {
 
                         System.out.println(e.getNota());
                         System.out.println(e.getPuntosObtenidos());
-                        //e.alumno.imprimirPadreFamiliar();
-                        e.getAlumno().imprimirPadreFamiliar();
-
-                        sistema.mostrarExamenes();
+                       System.out.println(p1.toString());
+                      
                     } else {
                         System.out.println("No hay suficiente espacio.");
                     }
 
-                    sistema.agregarEx(e);
+                    
                     break;
                 case 2:
 
                     sistema.mostrarExamenes();
                     break;
-                case 3:
-                    Alumno al = new Alumno();
-                    al.mostrardatos();
-
-                    break;
+               
             }
-
+            break;
         }
     }
 }

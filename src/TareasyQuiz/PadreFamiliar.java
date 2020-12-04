@@ -26,7 +26,7 @@ public class PadreFamiliar {
         this.nombreMadre = nombreMadre;
         this.apellidoMadre = apellidoMadre;
     }
-
+   
     @Override
     public String toString() {
         return "PadreFamiliar{" + "nombrePadre=" + nombrePadre + ", apellidoPadre=" + apellidoPadre + ", nombreMadre=" + nombreMadre + ", apellidoMadre=" + apellidoMadre + '}';
