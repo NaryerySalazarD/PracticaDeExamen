@@ -12,16 +12,17 @@ import java.util.Date;
  * @author Naryery
  */
 public class Examen {
-      Alumno alumno;
+
+    Alumno alumno;
     int nota;
     String nombreMateria;
     int puntosTotal;
     int puntosObtenidos;
     Date fecha;
 
-    public Examen(){
+    public Examen() {
     }
-    
+
     public Examen(Alumno alumno, int nota, int puntosTotal, int puntosObtenidos, Date fecha) {
         this.alumno = alumno;
         this.nota = nota;
@@ -95,5 +96,5 @@ public class Examen {
 
     public void setAlumno(Alumno alumno) {
         this.alumno = alumno;
-    } 
+    }
 }

@@ -5,13 +5,12 @@
  */
 package TareasyQuiz;
 
-
-
 /**
  *
  * @author Naryery
  */
 public class Alumno {
+
     String nombre;
     String apellido;
     int carne;
@@ -29,7 +28,6 @@ public class Alumno {
     public Alumno(PadreFamiliar madre) {
         this.madre = madre;
     }
-    
 
     public PadreFamiliar getPadre() {
         return padre;
@@ -38,8 +36,8 @@ public class Alumno {
     public void setPadre(PadreFamiliar padre) {
         this.padre = padre;
     }
-    
-    public Alumno(){
+
+    public Alumno() {
     }
 
     public Alumno(String nombre, String apellido, int carne) {
@@ -47,14 +45,13 @@ public class Alumno {
         this.apellido = apellido;
         this.carne = carne;
     }
-    
-    
-   public void imprimirPadreFamiliar(){
-        System.out.println(padre.getNombrePadre()+ " " + padre.getApellidoPadre());
+
+    public void imprimirPadreFamiliar() {
+        System.out.println(padre.getNombrePadre() + " " + padre.getApellidoPadre());
         System.out.println(padre);
-         System.out.println(madre.getNombreMadre() + " " + madre.getApellidoMadre());
+        System.out.println(madre.getNombreMadre() + " " + madre.getApellidoMadre());
         System.out.println(madre);
-    }    
+    }
 
     public Alumno(String nombre, String apellido, int carne, PadreFamiliar padre) {
         this.nombre = nombre;
@@ -62,16 +59,12 @@ public class Alumno {
         this.carne = carne;
         this.padre = padre;
     }
-    
-   
-    
-    
-    public void mostrardatos(){
-        System.out.println("El nombre del alumno es:"+nombre+", El apellido del alumno es:"+apellido+". El carne del alumno es:"+ carne);
-    }
-   
-    //metodos gets y sets
 
+    public void mostrardatos() {
+        System.out.println("El nombre del alumno es:" + nombre + ", El apellido del alumno es:" + apellido + ". El carne del alumno es:" + carne);
+    }
+
+    //metodos gets y sets
     public String getNombre() {
         return nombre;
     }
@@ -95,12 +88,12 @@ public class Alumno {
     public void setCarne(int carne) {
         this.carne = carne;
     }
-       public PadreFamiliar getpadre() {
+
+    public PadreFamiliar getpadre() {
         return padre;
     }
 
-    public void setPadreFamiliar (PadreFamiliar padre) {
+    public void setPadreFamiliar(PadreFamiliar padre) {
         this.padre = padre;
     }
 }
-

@@ -22,8 +22,7 @@ public class Tester {
         while (true) {
             menu.opcionesMenu();
             opcion.ingresarOpcion();
-           
-            
+
             switch (opcion.opcion) {
                 case 1:
 
@@ -51,9 +50,7 @@ public class Tester {
                     System.out.println("Digite apellidos de la madre:");
                     String apellidosMadre = s.next();
 
-                    PadreFamiliar p1 = new PadreFamiliar(nombrePadre, apellidosPadre,nombreMadre,apellidosMadre);
-                    
-                   
+                    PadreFamiliar p1 = new PadreFamiliar(nombrePadre, apellidosPadre, nombreMadre, apellidosMadre);
 
                     Examen e = new Examen(alum, nota, puntosTotales,
                             puntosObtenidos, null);
@@ -61,19 +58,19 @@ public class Tester {
 
                         System.out.println(e.getNota());
                         System.out.println(e.getPuntosObtenidos());
-                       System.out.println(p1.toString());
-                      
+                        System.out.println(p1.toString());
+
                     } else {
                         System.out.println("No hay suficiente espacio.");
                     }
 
-                    
                     break;
+
                 case 2:
 
                     sistema.mostrarExamenes();
                     break;
-               
+
             }
             break;
         }

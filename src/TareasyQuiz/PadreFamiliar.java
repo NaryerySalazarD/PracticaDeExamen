@@ -10,15 +10,15 @@ package TareasyQuiz;
  * @author gigabyte
  */
 public class PadreFamiliar {
+
     String nombrePadre;
     String apellidoPadre;
     String nombreMadre;
     String apellidoMadre;
-   
-    
-    public PadreFamiliar(){
-    
-}
+
+    public PadreFamiliar() {
+
+    }
 
     public PadreFamiliar(String nombrePadre, String apellidoPadre, String nombreMadre, String apellidoMadre) {
         this.nombrePadre = nombrePadre;
@@ -26,7 +26,7 @@ public class PadreFamiliar {
         this.nombreMadre = nombreMadre;
         this.apellidoMadre = apellidoMadre;
     }
-   
+
     @Override
     public String toString() {
         return "PadreFamiliar{" + "nombrePadre=" + nombrePadre + ", apellidoPadre=" + apellidoPadre + ", nombreMadre=" + nombreMadre + ", apellidoMadre=" + apellidoMadre + '}';
@@ -63,8 +63,5 @@ public class PadreFamiliar {
     public void setApellidoMadre(String apellidoMadre) {
         this.apellidoMadre = apellidoMadre;
     }
-    
-    
-    
-    
+
 }
