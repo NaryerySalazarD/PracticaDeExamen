@@ -15,7 +15,7 @@ public class Moneda {
 
     String moneda;
     Scanner entrada = new Scanner(System.in);
-
+ 
     public Moneda() {
 
     }

@@ -37,7 +37,7 @@ public class Colon {
         System.out.println(unidades + "colones.");
 
     }
-     public void valorMonedaDestino() {
+     public void valorMonedaDestino() { 
         System.out.println("Introduzca la cantidad de unidades de su moneda destino:");
         unidades = entrada.nextFloat();
         System.out.println(unidades + "colones.");
