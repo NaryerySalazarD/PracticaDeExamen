@@ -30,6 +30,7 @@ public class MaqConvertidora {
     //Este metodo requiere que monedaOrigen y monedaSalida esten establecidas
     public float convertir(Moneda monedaOrigen, Moneda monedaSalida, float cantidadOrigen){
         float resultado = 0;
+        if(monedaOrigen!=null && monedaSalida!=null){
         if(monedaOrigen.getNombre().equals("colon")){
                if(monedaSalida.getNombre().equals("colon")){
                    resultado = cantidadOrigen;
@@ -40,15 +41,18 @@ public class MaqConvertidora {
                else{
                    resultado = cantidadOrigen/monedaGene2.getValorColon();
                }
-           }
+        }
+           
            else if(monedaOrigen.getNombre().equals("Dolar")){
            
            }
            else {
            
            }
+        }
         
-        return resultado;}
+        return resultado;
+    }
     
     public Moneda getMonedaColon() {
         return monedaColon;

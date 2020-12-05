@@ -17,8 +17,8 @@ public class Tester {
 
         //CONFIGURAR MONEDAS
         Moneda mColon = new Moneda("Colon", 1);
-        Moneda mGen1 = new Moneda();
-        Moneda mGen2 = new Moneda();
+        Moneda mGen1 = new Moneda("",0);
+        Moneda mGen2 = new Moneda("",0);
 
         //INICIA 
         Scanner s = new Scanner(System.in);
@@ -39,16 +39,19 @@ public class Tester {
             int numMonedaSalida = s.nextInt();
             System.out.println("Digite la cantidad");
             int cantidad = s.nextInt();
+            System.out.println(mGen2.getNombre());
+            System.out.println(mGen2.getNombre());
+            System.out.println(cantidad);
             
-
+/*
             if(numMonedaOrigen==1){//Colon
                 if(numMonedaSalida==1){//Colon
                     System.out.println("El valor equivalente es: "+maq.convertir(mColon, mColon, cantidad));
                 }
-                else if(numMonedaSalida==2){ //Dolar
+                else if(numMonedaSalida==2){ //Moneda genérica 1
                     System.out.println("El valor equivalente es: "+maq.convertir(mColon, mGen1, cantidad)); 
                 }
-                else { //euro
+                else { //Moneda genérica 2
                     System.out.println("El valor equivalente es: "+maq.convertir(mColon, mGen2, cantidad)); 
                 }
             }
@@ -57,7 +60,7 @@ public class Tester {
             }
             else{ //Euro
 
-            }
+            }*/
         }
     }
 }
