@@ -29,7 +29,7 @@ public class Tester {
             System.out.println("Digite sus otras dos monedas");
             mGen1.setNombre(s.next());
             mGen2.setNombre(s.next());
-            System.out.println("Digite el valor de la tasa de su moneda de origen");
+            System.out.println("Digite el valor de la tasa de las ambas monedas");
             mGen1.setValorColon(s.nextFloat());
             mGen2.setValorColon(s.nextFloat());
             MaqConvertidora maq = new MaqConvertidora(mColon, mGen1, mGen2);
@@ -39,13 +39,11 @@ public class Tester {
             int numMonedaSalida = s.nextInt();
             System.out.println("Digite la cantidad");
             int cantidad = s.nextInt();
-            System.out.println(mGen2.getNombre());
-            System.out.println(mGen2.getNombre());
-            System.out.println(cantidad);
+         
             
-/*
-            if(numMonedaOrigen==1){//Colon
-                if(numMonedaSalida==1){//Colon
+
+            if(numMonedaOrigen==1){
+                if(numMonedaSalida==1){
                     System.out.println("El valor equivalente es: "+maq.convertir(mColon, mColon, cantidad));
                 }
                 else if(numMonedaSalida==2){ //Moneda genérica 1
@@ -60,7 +58,8 @@ public class Tester {
             }
             else{ //Euro
 
-            }*/
+            
         }
     }
+}
 }
