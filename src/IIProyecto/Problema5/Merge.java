@@ -33,7 +33,7 @@ public class Merge {
         for (int p = 0; p < n2; p++) {
             derechaArray[p] = array_numeros[mitad + p + 1];
         }
-        int i = 0, p= 0;
+        int i = 0, p = 0;
         int iz = izquierda;
         while (i < n1 && p < n2) {
             if (izquierdaArray[i] <= derechaArray[p]) {
@@ -83,7 +83,17 @@ public class Merge {
 
         int n = array_numeros.length;
 
-        System.out.println("Array original:");
+        System.out.println("Array 1:");
+        for (int valor : primerArray) {
+            System.out.print(valor + " ");
+        }
+        System.out.println();
+        System.out.println("Array 2:");
+        for (int valor : segundoArray) {
+            System.out.print(valor + " ");
+        }
+        System.out.println();
+        System.out.println("Array combinado:");
         for (int valor : array_numeros) {
             System.out.print(valor + " ");
         }
