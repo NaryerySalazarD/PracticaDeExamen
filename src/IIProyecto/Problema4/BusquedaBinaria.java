@@ -7,7 +7,7 @@ package IIProyecto.Problema4;
 
 /**
  *
- * @author gigabyte
+ * @author NaryerySD
  */
 public class BusquedaBinaria {
 

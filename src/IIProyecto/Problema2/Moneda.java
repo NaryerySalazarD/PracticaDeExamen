@@ -7,7 +7,7 @@ package IIProyecto.Problema2;
 
 /**
  *
- * @author gigabyte
+ * @author NaryerySD
  */
 public class Moneda {
       String nombre;

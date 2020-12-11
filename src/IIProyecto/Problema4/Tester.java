@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class Tester {
 

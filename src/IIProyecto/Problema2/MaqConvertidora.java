@@ -7,7 +7,7 @@ package IIProyecto.Problema2;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class MaqConvertidora {
     Moneda monedaColon;

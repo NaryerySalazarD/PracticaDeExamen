@@ -7,7 +7,7 @@ package IIProyecto.Problema5;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class Merge {
 

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author gigabyte
+ * @author NaryerySD
  */
 public class Moneda {
 
