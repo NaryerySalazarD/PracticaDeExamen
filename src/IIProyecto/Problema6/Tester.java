@@ -10,5 +10,9 @@ package IIProyecto.Problema6;
  * @author NaryerySD
  */
 public class Tester {
+    public static void main(String[] args){
+    Reporte j=new Reporte();
+    j.imprimirReporte();
     
+}
 }
