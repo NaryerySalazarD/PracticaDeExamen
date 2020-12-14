@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Naryery
+ * @author Naryery TERMINADO
  */
 public class Tester {
 

@@ -7,7 +7,7 @@ package IIProyecto.Problema5;
 
 /**
  *
- * @author Naryery
+ * @author Naryery TERMINADO
  */
 public class Merge {
 

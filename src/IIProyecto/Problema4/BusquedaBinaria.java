@@ -28,14 +28,13 @@ public class BusquedaBinaria {
             mitad = (primerDato + ultimoDato) / 2;
             valorMitad = array_numeros[mitad];
             System.out.println("Comparo a " + numBuscado + " ,con " + array_numeros[mitad]);
-            if (numBuscado == mitad) {
+            if (numBuscado == valorMitad) {
                 return mitad;
             } else if (numBuscado < valorMitad) {
                 ultimoDato = mitad - 1;
             } else {
                 primerDato = mitad + 1;
             }
-
         }
         return -1;
     }

@@ -43,20 +43,42 @@ public class MaqConvertidora {
                }
         }
            
-           else if(monedaOrigen.getNombre().equals("Dolar")){
+           else if(monedaOrigen.getNombre().equals(monedaGene1.getNombre())){
+                if(monedaSalida.getNombre().equals(monedaGene1.getNombre())){
+                   resultado = cantidadOrigen;
+               }
+               else if(monedaSalida.getNombre().equals("colon")){
+                   resultado = cantidadOrigen*monedaGene1.getValorColon();
+               }
+               else{
+                   resultado = cantidadOrigen/monedaGene2.getValorColon();
+               }
            
            }
            else {
+                if(monedaSalida.getNombre().equals(monedaGene2.getNombre())){
+                   resultado = cantidadOrigen;
+               }
+               else if(monedaSalida.getNombre().equals("colon")){
+                   resultado = cantidadOrigen*monedaGene1.getValorColon();
+               }
+               else{
+                   resultado = cantidadOrigen/monedaGene2.getValorColon();
            
            }
         }
         
-        return resultado;
-    }
+        
     
-    public Moneda getMonedaColon() {
-        return monedaColon;
-    }
+    
+    //public Moneda getMonedaColon() {
+     //   return monedaColon;
+    //}
+
+
+}
+        return resultado;
+}
 }
     
     

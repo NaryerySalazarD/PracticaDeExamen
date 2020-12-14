@@ -6,7 +6,7 @@
 package IIProyecto.Problema1;
 
 /*
-NaryerySD
+NaryerySD TERMINADO
  */
 public class Tester {
 
