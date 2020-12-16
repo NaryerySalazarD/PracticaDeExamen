@@ -31,20 +31,24 @@ public class Euro {
         this.unidades = unidades;
     }
 
+    //Pregunta la moneda de origen 
     public String Moneda() {
         System.out.println("¿Cuál es su moneda de origen?");
         moneda = entrada.next();
         return moneda;
     }
 
+    //Convierte de euros a dólares
     public void ConvertorEuro_Dolar() {
         monedaDestino = unidades * tasa2;
     }
 
+    //Convierte de euros a colones
     public void ConvertorEuro_colon() {
         monedaDestino = unidades * tasa3;
     }
 
+    //Introduce el valor de la moneda de origen 
     public void ValorMonedaOrigen() {
         System.out.println("Introduzca la cantidad de unidades de su moneda:");
         unidades = entrada.nextFloat();

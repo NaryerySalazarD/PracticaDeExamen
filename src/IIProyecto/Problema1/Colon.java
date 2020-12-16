@@ -31,14 +31,17 @@ public class Colon {
         this.unidades = unidades;
     }
 
+    //Convierte de colones a dólares
     public void ConvertorColon_Dolar() {
         monedaDestino = unidades / tasaDolar;
     }
 
+    //Convierte de colones a euros
     public void ConvertorColon_Euro() {
         monedaDestino = unidades / tasaEuro;
     }
 
+    //Introduce el valor de la moneda de origen
     public void ValorMonedaOrigen() {
         System.out.println("Introduzca la cantidad de unidades de su moneda:");
         unidades = entrada.nextFloat();

@@ -21,8 +21,6 @@ public class Dolar {
     private final double tasa2 = 1.53;//1 euro son 1.53 dólares
     Scanner entrada = new Scanner(System.in);
 
-   
-
     public Dolar() {
 
     }
@@ -34,14 +32,17 @@ public class Dolar {
         this.unidades = unidades;
     }
 
+    //Convierte de dólares a colones
     public void ConvertorDolar_colon() {
         monedaDestino = unidades * tasa1;
     }
 
+    //Convierte de dólares a euros
     public void ConvertorDolar_euro() {
         monedaDestino = unidades / tasa2;
     }
 
+    //Introduce el valor de la moneda de origen
     public void ValorMonedaOrigen() {
         System.out.println("Introduzca la cantidad de unidades de su moneda:");
         unidades = entrada.nextFloat();

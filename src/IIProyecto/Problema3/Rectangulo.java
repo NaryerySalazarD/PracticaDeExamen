@@ -10,12 +10,14 @@ package IIProyecto.Problema3;
  * @author gigabyte
  */
 public class Rectangulo {
+
     int posX;
     int posY;
     int ancho;
     int alto;
-    public Rectangulo(){
-        
+
+    public Rectangulo() {
+
     }
 
     public Rectangulo(int posX, int posY, int ancho, int alto) {
@@ -56,5 +58,5 @@ public class Rectangulo {
     public void setAlto(int alto) {
         this.alto = alto;
     }
-    
+
 }

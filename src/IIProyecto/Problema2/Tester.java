@@ -27,9 +27,9 @@ public class Tester {
             mGen1.setNombre(s.next());
             mGen2.setNombre(s.next());
             System.out.println("Digite el valor de la tasa en su moneda de origen");
-             System.out.println("Moneda 1");
+            System.out.println("Moneda 1");
             mGen1.setValorColon(s.nextFloat());
-             System.out.println("Moneda 2");
+            System.out.println("Moneda 2");
             mGen2.setValorColon(s.nextFloat());
             mGen1 = new Moneda(mGen1.getNombre(), mGen1.getValorColon());
             mGen2 = new Moneda(mGen2.getNombre(), mGen2.getValorColon());

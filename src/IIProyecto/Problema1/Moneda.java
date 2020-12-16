@@ -18,11 +18,13 @@ public class Moneda {
 
     Scanner entrada = new Scanner(System.in);
 
+    //Pregunta la moneda de origen 
     public String Moneda() {
         System.out.println("¿Cuál es su moneda de origen(colones,dolares,euros)?");
         monedaOrigen = entrada.next();
         return monedaOrigen;
     }
+    //Pregunta la moneda destino
 
     public String MonedaDestino() {
         System.out.println("¿Cuál es su moneda destino(colones,dolares,euros)?");

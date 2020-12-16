@@ -11,6 +11,7 @@ package IIProyecto.Problema5;
  */
 public class Merge {
 
+    //Ordena el arreglo
     public void ordenar(int array_numeros[], int izquierda, int derecha) {
         if (izquierda < derecha) {
 
@@ -22,6 +23,7 @@ public class Merge {
 
     }
 
+    //Combina ambos arreglos 
     public void unir(int array_numeros[], int izquierda, int mitad, int derecha) {
         int n1 = mitad - izquierda + 1;
         int n2 = derecha - mitad;
@@ -57,6 +59,7 @@ public class Merge {
         }
     }
 
+    //Imprime los valores del arreglo 
     public void imprimirArreglo(int array_numeros[]) {
         int numero = array_numeros.length;
         for (int i = 0; i < numero; ++i) {
@@ -66,10 +69,12 @@ public class Merge {
     }
 
     public static void main(String[] args) {
-
+        //Llama la función 
         Merge fucionOrdenada = new Merge();
+        //Llena los valores del arreglo 
         int[] primerArray = {8, 97, 4, 26, 5};
         int[] segundoArray = {4, 16, 1, 2, 22};
+        //Combina ambos arreglos 
         int array_numeros[] = new int[primerArray.length + segundoArray.length];
         int count = 0;
 
@@ -82,24 +87,26 @@ public class Merge {
         }
 
         int n = array_numeros.length;
-
+        //Muestra el primer arreglo 
         System.out.println("Array 1:");
         for (int valor : primerArray) {
             System.out.print(valor + " ");
         }
+        //Muestra el segundo arreglo 
         System.out.println();
         System.out.println("Array 2:");
         for (int valor : segundoArray) {
             System.out.print(valor + " ");
         }
         System.out.println();
+        //Muestra la combinación de ambos arreglos 
         System.out.println("Array combinado:");
         for (int valor : array_numeros) {
             System.out.print(valor + " ");
         }
 
         System.out.println();
-
+        //ordena este arreglo de menor a mayor 
         System.out.println("Array ordenado e intercalado:");
         fucionOrdenada.ordenar(array_numeros, 0, n - 1);
         fucionOrdenada.imprimirArreglo(array_numeros);

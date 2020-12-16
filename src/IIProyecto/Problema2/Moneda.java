@@ -10,11 +10,13 @@ package IIProyecto.Problema2;
  * @author NaryerySD
  */
 public class Moneda {
-      String nombre;
-      float valorColon;
-      public Moneda(){
-          
-      }
+
+    String nombre;
+    float valorColon;
+
+    public Moneda() {
+
+    }
 
     public Moneda(String nombre, float valorColon) {
         this.nombre = nombre;
@@ -36,5 +38,5 @@ public class Moneda {
     public void setValorColon(float valorColon) {
         this.valorColon = valorColon;
     }
-  
+
 }

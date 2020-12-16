@@ -10,14 +10,15 @@ package IIProyecto.Problema3;
  * @author Andres
  */
 public class Ovalo {
+
     int posX;
     int posY;
     int ancho;
     int alto;
-    
-     public Ovalo(){
-         
-     }
+
+    public Ovalo() {
+
+    }
 
     public Ovalo(int posX, int posY, int ancho, int alto) {
         this.posX = posX;
@@ -58,9 +59,4 @@ public class Ovalo {
         this.alto = alto;
     }
 
-    boolean getAlto(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
 }

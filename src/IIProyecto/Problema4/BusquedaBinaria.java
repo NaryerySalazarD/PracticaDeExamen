@@ -20,6 +20,7 @@ public class BusquedaBinaria {
 
     }
 
+    //Implementa la búsqueda binaria 
     public int BusquedaBinaria(int array_numeros[], int numBuscado) {
 
         primerDato = 0;
@@ -38,7 +39,9 @@ public class BusquedaBinaria {
         }
         return -1;
     }
-     public void imprimirArreglo(int array_numeros[]) {
+
+    //Imprime el arreglo
+    public void imprimirArreglo(int array_numeros[]) {
         int numero = array_numeros.length;
         for (int i = 0; i < numero; ++i) {
             System.out.print(array_numeros[i] + " ");

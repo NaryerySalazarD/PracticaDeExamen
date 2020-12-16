@@ -11,11 +11,12 @@ NaryerySD TERMINADO
 public class Tester {
 
     public static void main(String args[]) {
+        //Llama las otras clases
         Colon moneda1 = new Colon();
         Dolar moneda2 = new Dolar();
         Euro moneda3 = new Euro();
         Moneda moneda = new Moneda();
-
+        //Menú para escoger la moneda
         moneda.Moneda();
         switch (moneda.getMonedaOrigen()) {
             case "colones":
@@ -31,6 +32,7 @@ public class Tester {
                 System.out.println(moneda3.getUnidades() + "euros.");
                 break;
         }
+        //restricciones
         moneda.MonedaDestino();
         if (moneda.getMonedaOrigen().equals("colones") && moneda.getMonedaDestino().equals("dolares")) {
             moneda1.ConvertorColon_Dolar();
