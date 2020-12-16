@@ -29,13 +29,14 @@ public class SistemaNotasReporte {
         
     }
     public void generarReporteTodosExamenesOrdenadosPor(String nombre){
+        Alumno nombre1=new Alumno();
         ArrayList<String> lista = new ArrayList<>();
+        
+        nombre = nombre1.getNombre();
 
-        String s = nombre;
-
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = i + 1; j <= s.length(); j++) {
-                String r = s.substring(i, j);
+        for (int i = 0; i < nombre.length(); i++) {
+            for (int j = i + 1; j <= nombre.length(); j++) {
+                String r = nombre.substring(i, j);
                 lista.add(r);//Se añaden al la lista
             }
         }
@@ -46,7 +47,7 @@ public class SistemaNotasReporte {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
         
-        sistema.mostrarExAgregado();
+      
     }
 }
 }

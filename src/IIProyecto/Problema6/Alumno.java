@@ -10,7 +10,10 @@ public class Alumno {
     int carne;
     
     public Alumno(){
+        
     }
+    
+    
 
     public Alumno(PadreFamiliar padre, String nombre, String apellido, int carne) {
         this.padre = padre;

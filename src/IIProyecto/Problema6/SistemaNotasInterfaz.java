@@ -15,18 +15,52 @@ import javax.swing.JOptionPane;
 public class SistemaNotasInterfaz {
 
     Scanner s = new Scanner(System.in);
-    boolean modoGrafico=true;
+    boolean modoGrafico = true;
 
     public void SistemaNotasInterfaz() {
 
         SistemaNotas sistema = new SistemaNotas();
-        
+
         while (true) {
-            
+
             if (modoGrafico) { //Modo gráfico
-                 String mensaje="Digite el nombre del alumno:";
-                JOptionPane.showInputDialog(null,mensaje);
+                String mensaje = "Digite el nombre del alumno:";
+                String x = JOptionPane.showInputDialog(null, mensaje);
+                mensaje = "Digite el apellido del alumno:";
+                String y = JOptionPane.showInputDialog(null, mensaje);
+                mensaje = "Digite el carne:";
+                int z = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje));
+                 Alumno alum = new Alumno(x, y, z);
+                  mensaje ="Digite la nota obtenida:";
+                int nota = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje));
+                 mensaje ="Digite puntos totales:";
+                int puntosTotales = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje));
+                 mensaje ="Digite puntos obtenidos:";
+                int puntosObtenidos = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje));
                 
+                //padre familiar
+                 mensaje = "Digite nombre padre:";
+                String nombrePadre = JOptionPane.showInputDialog(null, mensaje);
+                mensaje = "Digite apellidos padre:";
+                String apellidosPadre = JOptionPane.showInputDialog(null, mensaje);
+                PadreFamiliar p1 = new PadreFamiliar(nombrePadre, apellidosPadre);
+                alum.setPadre(p1);
+
+                Examenes e = new Examenes(alum, nota, puntosTotales,
+                        puntosObtenidos, null);
+
+                if (sistema.agregarEx(e)) {
+
+                    System.out.println(e.getNota());
+                    System.out.println(e.getPuntosObtenidos());
+                    //e.alumno.imprimirPadreFamiliar();
+                    e.getAlumno().imprimirPadreFamiliar();
+
+                    sistema.mostrarExamenes();
+                } else {
+                    System.out.println("No hay suficiente espacio.");
+                }
+
             } else { //modo interativo
                 System.out.println("Digite el nombre del alumno:");
                 String x = s.next();
@@ -69,9 +103,7 @@ public class SistemaNotasInterfaz {
                 }
 
             }
-           
 
         }
     }
 }
-

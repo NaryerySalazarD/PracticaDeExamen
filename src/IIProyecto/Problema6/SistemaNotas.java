@@ -75,7 +75,5 @@ public class SistemaNotas {
         return retorno;
     }
 
-    void mostrarExAgregado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }
