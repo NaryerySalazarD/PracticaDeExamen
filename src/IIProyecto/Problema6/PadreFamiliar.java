@@ -13,8 +13,8 @@ public class PadreFamiliar {
     String nombre;
     String apellidos;
     
-    //public PadreFamiliar(){
-    //}
+    public PadreFamiliar(){
+    }
 
     public PadreFamiliar(String nombre, String apellidos) {
         this.nombre = nombre;

@@ -5,21 +5,48 @@
  */
 package IIProyecto.Problema6;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  *
  * @author gigabyte
  */
 public class SistemaNotasReporte {
+    SistemaNotas sistema=new SistemaNotas();
+    Alumno padre=new Alumno();
     public void generarReporteTodosExamenes(){
-        
+        sistema.mostrarExamenes();
     }
     public void generarReporteTodosAlumnos(){
-        
+        sistema.mostrarAlumnos();
     }
     public void generarReporteAlumnosConNotaInferiorA(int nota){
+        if(nota<70){
+        padre.mostrardatos();
+        padre.imprimirPadreFamiliar();
+        }
         
     }
-    public void generarReporteTodosExamenesOrdenadosPor(String propiedad){
+    public void generarReporteTodosExamenesOrdenadosPor(String nombre){
+        ArrayList<String> lista = new ArrayList<>();
+
+        String s = nombre;
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                String r = s.substring(i, j);
+                lista.add(r);//Se añaden al la lista
+            }
+        }
+
+        Collections.sort(lista);//Este es el metodo que ordena la lista.
+
+        System.out.println("Las substrings de la palabra son:");
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(lista.get(i));
         
+        sistema.mostrarExAgregado();
     }
+}
 }
