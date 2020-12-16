@@ -8,6 +8,8 @@ import java.util.Scanner;
  * Panel para dibujar
  */
 public class JPanelDibujo extends JPanel {
+     int numFigOval = (int)(Math.random() * 10+1);
+       int numFigRec = (int) (Math.random() * 10+1);
 
     /* 
    * Constructor del panel para dibujar
@@ -21,15 +23,15 @@ public class JPanelDibujo extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
 
-        int numFigOval = (int)(Math.random() * 10+1);
-       int numFigRec = (int) (Math.random() * 10+1);
+       
         for(int i=0;i< numFigOval;i++) {
             Ovalo o = new Ovalo();
             o.setPosX((int)(Math.random() * 100));
             o.setPosY((int) (Math.random() * 500));
             o.setAncho((int)(Math.random() * 600));
             o.setAlto((int) (Math.random() * 400));
-            //OVALOS          
+            //OVALOS 
+             
             g.setColor(Color.yellow);
             g.fillOval(o.getPosX(), o.getPosY(), o.getAncho(), o.getAlto()); //dibuja un ovalo con fondo amarillo
             
@@ -48,6 +50,14 @@ public class JPanelDibujo extends JPanel {
             g.setColor(Color.black);
            
         }
+        
 
+    }
+    public void Contador(){
+         System.out.println("¿Cuántos objetos óvalo se están instanciando en memoria?");
+         System.out.println("Se están instanciando "+numFigOval+" figuras óvalo en memoria.");
+          System.out.println("¿Cuántos objetos rectángulo se están instanciando en memoria?");
+         System.out.println("Se están instanciando "+numFigRec+" figuras rectángulo en memoria.");
+         System.out.println("¿Cada objeto tiene valores diferentes?"+ "Sí, ya que utilizamos Math.random");
     }
 }

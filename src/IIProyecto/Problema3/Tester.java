@@ -6,6 +6,8 @@ public class Tester {
        
       // Se crea una ventana con el titulo especifico
       MiVentana miVentana = new MiVentana("VENTANA PARA GRAFICAR");
-      
+      JPanelDibujo n=new JPanelDibujo();
+      n.Contador();
+     
    }
 }
