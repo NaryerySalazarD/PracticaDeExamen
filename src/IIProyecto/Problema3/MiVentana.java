@@ -48,6 +48,8 @@ public class MiVentana extends JFrame{
     
     // Agrega los componentes a MiVentana
     this.add(panelIzquierda, BorderLayout.WEST);
+     
+  
     this.add(panelCentral, BorderLayout.CENTER);
 
     
