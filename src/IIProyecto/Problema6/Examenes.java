@@ -1,10 +1,9 @@
 package IIProyecto.Problema6;
 
-
-
 import java.util.Date;
 
 public class Examenes {
+
     Alumno alumno;
     private int nota;
     private String nombreMateria;
@@ -12,9 +11,9 @@ public class Examenes {
     private int puntosObtenidos;
     private Date fecha;
 
-    public Examenes(){
+    public Examenes() {
     }
-    
+
     public Examenes(Alumno alumno, int nota, int puntosTotal, int puntosObtenidos, Date fecha) {
         this.alumno = alumno;
         this.nota = nota;
@@ -88,5 +87,5 @@ public class Examenes {
 
     public void setAlumno(Alumno alumno) {
         this.alumno = alumno;
-    } 
+    }
 }

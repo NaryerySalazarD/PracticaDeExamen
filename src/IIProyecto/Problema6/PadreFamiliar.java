@@ -10,10 +10,11 @@ package IIProyecto.Problema6;
  * @author Andres
  */
 public class PadreFamiliar {
+
     String nombre;
     String apellidos;
-    
-    public PadreFamiliar(){
+
+    public PadreFamiliar() {
     }
 
     public PadreFamiliar(String nombre, String apellidos) {
@@ -42,6 +43,5 @@ public class PadreFamiliar {
     public String toString() {
         return "PadreFamiliar{" + "nombre=" + nombre + ", apellidos=" + apellidos + '}';
     }
-    
-    
+
 }

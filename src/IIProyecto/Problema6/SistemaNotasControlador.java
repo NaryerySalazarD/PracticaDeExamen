@@ -10,5 +10,10 @@ package IIProyecto.Problema6;
  * @author gigabyte
  */
 public class SistemaNotasControlador {
-    
+
+    public void iniciar() {
+        SistemaNotas sistema = new SistemaNotas();
+        SistemaNotasInterfaz t = new SistemaNotasInterfaz(sistema);
+        t.SistemaNotasInterfaz();
+    }
 }
