@@ -5,18 +5,25 @@
  */
 package IIProyecto.Problema6;
 
+
+   
 /**
  *
  * @author NaryerySD
  */
 public class Tester {
-    public static void main(String[] args){
-         Alumno nombre1=new Alumno();
    
-   
-   SistemaNotasControlador n=new SistemaNotasControlador();
+ 
+
+ 
+     public static void main(String[] args){  
+
+    SistemaNotasControlador n=new SistemaNotasControlador();
    n.iniciar();
-   
-   
-}
+
+      
+
+     }
+
+     
 }

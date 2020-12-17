@@ -1,5 +1,7 @@
 package IIProyecto.Problema6;
 
+import javax.swing.JOptionPane;
+
 public class SistemaNotas {
 
     int maxRegistros = 100;
@@ -55,10 +57,17 @@ public class SistemaNotas {
     }
 
     //mostrar examenes
-    public void mostrarExamenes() {
+    public void mostrarExamenesIN() {
         for (int i = 0; i < cont; i++) {
             if (examenes[i] != null) {
                 System.out.println(examenes[i].toString());
+            }
+        }
+    }
+     public void mostrarExamenesGR() {
+        for (int i = 0; i < cont; i++) {
+            if (examenes[i] != null) {
+                JOptionPane.showMessageDialog(null,examenes[i].toString());
             }
         }
     }

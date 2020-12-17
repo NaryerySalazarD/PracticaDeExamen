@@ -5,17 +5,41 @@
  */
 package IIProyecto.Problema6;
 
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /**
  *
  * @author gigabyte
  */
 public class SistemaNotasReporte {
 
+    int maxRegistros = 100;
+
     SistemaNotas sistema = new SistemaNotas();
     Alumno padre = new Alumno();
 
+    public SistemaNotasReporte() {
+        JFrame f = new JFrame("REPORTES");
+
+        JPanel panel = new JPanel();
+
+        panel.setBounds(40, 80, 200, 200);
+
+        panel.setBackground(Color.CYAN);
+
+        f.add(panel);
+        f.setSize(400, 400);
+
+        f.setLayout(null);
+
+        f.setVisible(true);
+
+    }
+
     public void generarReporteTodosExamenes() {
-        sistema.mostrarExamenes();
+        sistema.mostrarExamenesIN();
     }
 
     public void generarReporteTodosAlumnos() {
@@ -26,7 +50,7 @@ public class SistemaNotasReporte {
         Examenes e = new Examenes();
 
         nota = e.getNota();
-        int cont = 100;
+        int cont = maxRegistros;
         for (int i = 0; i < cont; i++) {
             if (nota < 70) {
                 padre.mostrardatos();
@@ -35,17 +59,16 @@ public class SistemaNotasReporte {
         }
 
     }
+    String propiedad = "nota";
 
-    public void generarReporteTodosExamenesOrdenadosPor(String[] nombre) {
-        for (int j = 0; j < 4; j++) {
-            for (int i = 0; i < 4 - j; i++) {
-                if (nombre[i].compareTo(nombre[i + 1]) > 0) {
-                    String aux;
-                    aux = nombre[i];
-                    nombre[i] = nombre[i + 1];
-                    nombre[i + 1] = aux;
-                }
-            }
+    public void generarReporteTodosExamenesOrdenadosPor(String propiedad) {
+
+        if (propiedad.equals("nota")) {
+
+        } else if (propiedad.equals("puntosTotales")) {
+
         }
+
     }
+
 }

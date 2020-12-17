@@ -10,10 +10,26 @@ package IIProyecto.Problema6;
  * @author gigabyte
  */
 public class SistemaNotasControlador {
-
+  boolean modoGrafico =true;
     public void iniciar() {
-        SistemaNotas sistema = new SistemaNotas();
-        SistemaNotasInterfaz t = new SistemaNotasInterfaz(sistema);
-        t.SistemaNotasInterfaz();
+        SistemaNotas nota = new SistemaNotas();
+        SistemaNotasInterfaz nv = new SistemaNotasInterfaz(nota,modoGrafico);
+        int op;
+        do {
+            op = nv.getOpcion();
+            switch (op) {
+                case 1:
+                    nv.gráfico();
+                      
+                   SistemaNotasReporte panel= new SistemaNotasReporte(); 
+                    break;
+                case 2:
+                    nv.interativo();
+                     panel = new SistemaNotasReporte(); 
+                    break;
+                default:
+            }
+        } while (op != 3);
     }
+
 }
