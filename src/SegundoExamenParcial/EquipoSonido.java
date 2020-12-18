@@ -14,65 +14,15 @@ public class EquipoSonido {
     String parlanteDerecho;
     String parlanteIzquierdo;
     String parlanteSubwoofer;
-    int volumen; 
-    
+    int volumen;
+
     public EquipoSonido(String parlanteDerecho, String parlanteIzquierdo, String parlanteSubwoofer) {
         this.parlanteDerecho = parlanteDerecho;
         this.parlanteIzquierdo = parlanteIzquierdo;
         this.parlanteSubwoofer = parlanteSubwoofer;
     }
 
-   
-   
     public EquipoSonido() {
-       
-    }
-
-    public void sonarParlanteDerecho(String audio) {
-        
-    }
-
-    public void sonarParlanteIzquierdo(String audio) {
-
-    }
-
-    public void sonarParlanteSubwoofer(String audio) {
-
-    }
-
-    public void volumenParlanteDerecho() {
-        
-    }
-
-    public void volumenParlanteIzquierdo() {
-
-    }
-
-    public void volumenParlanteSubwoofer() {
-
-    }
-
-    public void habilitarParlanteDerecho() {
-
-    }
-
-    public void habilitarParlanteIzquierdo() {
-
-    }
-
-    public void habilitarParlanteSubwoofer() {
-
-    }
-
-    public void deshabilitarParlanteDerecho() {
-
-    }
-
-    public void deshabilitarParlanteIzquierdo() {
-        
-    }
-
-    public void deshabilitarParlanteSubwoofer() {
 
     }
 

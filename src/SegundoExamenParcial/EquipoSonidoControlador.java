@@ -11,10 +11,10 @@ package SegundoExamenParcial;
  */
 public class EquipoSonidoControlador {
 
-    
+     boolean modoGrafico =true;
     public void iniciar(){
        EquipoSonido n=new EquipoSonido();
-       EquipoSonidoControlador k=new EquipoSonidoControlador(n);
+       EquipoSonidoControlador k=new EquipoSonidoControlador(n,modoGrafico);
         
     }
 }

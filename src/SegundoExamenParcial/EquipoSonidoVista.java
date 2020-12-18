@@ -29,6 +29,73 @@ public class EquipoSonidoVista {
         }
     }
 
+    public void sonarParlanteDerecho(String audio) {
+        parlante.setParlanteDerecho("Su parlante está sonandola canción " + audio);
+    }
+
+    public void sonarParlanteIzquierdo(String audio) {
+        parlante.setParlanteIzquierdo("Su parlante está sonandola canción " + audio);
+    }
+
+    public void sonarParlanteSubwoofer(String audio) {
+        parlante.setParlanteSubwoofer("Su parlante está sonando la canción " + audio);
+
+    }
+
+    public void volumenParlanteDerecho() {
+        System.out.println("Desea:/ 1. subir volumen/ 2. bajar volumen");
+        int op = entrada.nextInt();
+        if (op == 1) {
+            System.out.println("Subió el volumen del parlante derecho.");
+        } else {
+            System.out.println("Bajó el volumen del parlante derecho.");
+        }
+    }
+
+    public void volumenParlanteIzquierdo() {
+        System.out.println("Desea:/ 1. subir volumen/ 2. bajar volumen");
+        int op = entrada.nextInt();
+        if (op == 1) {
+            System.out.println("Subió el volumen del parlante izquierdo.");
+        } else {
+            System.out.println("Bajó el volumen del parlante izquierdo.");
+        }
+    }
+
+    public void volumenParlanteSubwoofer() {
+        System.out.println("Desea:/ 1. subir volumen/ 2. bajar volumen");
+        int op = entrada.nextInt();
+        if (op == 1) {
+            System.out.println("Subió el volumen del parlante subwoofer.");
+        } else {
+            System.out.println("Bajó el volumen del parlante subwoofer.");
+        }
+    }
+
+    public void habilitarParlanteDerecho() {
+        System.out.println("Parlante derecho habilitado");
+    }
+
+    public void habilitarParlanteIzquierdo() {
+        System.out.println("Parlante izquierdo habilitado");
+    }
+
+    public void habilitarParlanteSubwoofer() {
+        System.out.println("Parlante subwoofer habilitado");
+    }
+
+    public void deshabilitarParlanteDerecho() {
+        System.out.println("Parlante derecho deshabilitado");
+    }
+
+    public void deshabilitarParlanteIzquierdo() {
+        System.out.println("Parlante izquierdo deshabilitado");
+    }
+
+    public void deshabilitarParlanteSubwoofer() {
+        System.out.println("Parlante subwoofer deshabilitado");
+    }
+
     @Override
     public String toString() {
         return "ListaReproduccion{" + "listaAudios=" + listaAudios + '}';
@@ -39,7 +106,11 @@ public class EquipoSonidoVista {
     }
 
     public void orden() {
-
+        for (int i = 0; i < cont; i++) {
+            if (listaAudios[i] != null) {
+                System.out.println(listaAudios[i]);
+            }
+        }
     }
 
     public void mostrarLista() {
