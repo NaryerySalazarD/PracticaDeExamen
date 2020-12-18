@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author gigabyte
+ * @author Naryery
  */
 public class SistemaNotasReporte {
 

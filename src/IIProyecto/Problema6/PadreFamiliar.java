@@ -7,7 +7,7 @@ package IIProyecto.Problema6;
 
 /**
  *
- * @author Andres
+ * @author Naryery
  */
 public class PadreFamiliar {
 
@@ -38,7 +38,7 @@ public class PadreFamiliar {
         this.apellidos = apellidos;
     }
 
-    // PadreFamiliar{nombre=Kiko, apellidos=Barrantes}
+ 
     @Override
     public String toString() {
         return "PadreFamiliar{" + "nombre=" + nombre + ", apellidos=" + apellidos + '}';

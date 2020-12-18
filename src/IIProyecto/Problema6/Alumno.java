@@ -66,8 +66,6 @@ public class Alumno {
         this.padre = padre;
     }
 
-    void getNombre(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
 }
