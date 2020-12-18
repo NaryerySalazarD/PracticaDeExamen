@@ -10,5 +10,13 @@ package SegundoExamenParcial;
  * @author gigabyte
  */
 public class Reloj {
-    
+    public void setAlarm(int horas, int minutos){
+        
+    }
+     public void getHora(){
+         
+     }
+      public void  getMin(){
+       
+      }
 }

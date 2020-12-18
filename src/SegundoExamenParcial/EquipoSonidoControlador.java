@@ -9,11 +9,12 @@ package SegundoExamenParcial;
  *
  * @author gigabyte
  */
-public class Tester {
-    public static void main (String a[]){
+public class EquipoSonidoControlador {
 
- EquipoSonido controlador = new EquipoSonido();
- controlador.iniciar();
- }
-
+    
+    public void iniciar(){
+       EquipoSonido n=new EquipoSonido();
+       EquipoSonidoControlador k=new EquipoSonidoControlador(n);
+        
+    }
 }
