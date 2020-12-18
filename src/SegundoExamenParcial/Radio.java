@@ -13,7 +13,9 @@ public class Radio {
     String audio="101001";
     String encender;
     String apagar;
-
+    public Radio(){
+        
+    }
     public Radio(String encender, String apagar) {
         this.encender = encender;
         this.apagar = apagar;

@@ -73,6 +73,12 @@ public class EquipoSonidoControlador {
             case 6:
                 k.eliminarAudio();
                 break;
+            case 7:
+                k.radio();
+                break;
+            case 8:
+                k.hora();
+                break;
             default:
                 
                 break;

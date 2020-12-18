@@ -162,7 +162,9 @@ public class EquipoSonidoVista {
         System.out.println("4.Muestra la lista completa");
         System.out.println("5.Agregar audio");
         System.out.println("6.Eliminar audio");
-        System.out.println("7.Salir");
+        System.out.println("7.Utilizar radio");
+        System.out.println("8.Programar hora");
+        System.out.println("9.Salir");
     }
 
     public void menuParlante() {
@@ -181,6 +183,31 @@ public class EquipoSonidoVista {
         int r;
         r = entrada.nextInt();
         return r;
+    }
+
+    public void radio() {
+        Radio n=new Radio();
+        n.setAudio("10101");
+        System.out.println("1.Apagar radio");
+        System.out.println("2.Encender radio");
+        
+        int h = entrada.nextInt();
+        if (h==1)
+         System.out.println("Radio apagado"); 
+        else
+          System.out.println("Radio encendido con el audio "+n.getAudio());  
+    }
+
+    public void hora() {
+        Reloj r = new Reloj();
+
+        System.out.println("Introduzca la hora");
+        int hora = entrada.nextInt();
+
+        System.out.println("Introduzca los minutos");
+        int minutos = entrada.nextInt();
+        r.setAlarm(hora, minutos);
+        System.out.println("El equipo de sonido se encenderá automáticamente a las " + hora + " horas con " + minutos + " minutos.");
     }
 
     public Scanner getEntrada() {
