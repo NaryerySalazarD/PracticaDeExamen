@@ -17,13 +17,14 @@ public class EquipoSonidoControlador {
         EquipoSonido n = new EquipoSonido();
         EquipoSonidoVista k = new EquipoSonidoVista(n);
         k.getOpcion();
+        while(true){
         switch (k.menu()) {
             case 1:
                 k.menuParlante();
                 if (k.menu() == 1) {
                     k.menuParlantes();
                     if (k.menu() == 1) {
-                        k.sonarParlanteDerecho(audio);
+                        k.sonarParlanteDerecho();
                     }
                     else if (k.menu() == 2) {
                         k.volumenParlanteDerecho();
@@ -36,7 +37,7 @@ public class EquipoSonidoControlador {
                     if (k.menu() == 2) {
                         k.menuParlantes();
                         if (k.menu() == 1) {
-                            k.sonarParlanteIzquierdo(audio);
+                            k.sonarParlanteIzquierdo();
                         }
                         else if (k.menu() == 2) {
                             k.volumenParlanteIzquierdo();
@@ -47,7 +48,7 @@ public class EquipoSonidoControlador {
                     } else {
                         k.menuParlantes();
                         if (k.menu() == 1) {
-                            k.sonarParlanteIzquierdo(audio);
+                            k.sonarParlanteIzquierdo();
                         }
                         if (k.menu() == 2) {
                             k.volumenParlanteIzquierdo();
@@ -58,22 +59,27 @@ public class EquipoSonidoControlador {
                     }
                 }       break;
             case 2:
-                
+                k.orden();
                 break;
             case 3:
+                k.aleatorio();
                 break;
             case 4:
-                
+                k.mostrarLista();
                 break;
             case 5:
-                k.agregarAudio(entrada);
+                k.agregarAudio();
                 break;
             case 6:
                 k.eliminarAudio();
                 break;
             default:
+                
                 break;
         }
+        break;
         } 
 }
+    
 }
+

@@ -6,7 +6,6 @@
 package SegundoExamenParcial;
 
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,18 +31,25 @@ public class EquipoSonidoVista {
     }
 
     public void sonarParlanteDerecho() {
-        String audio=entrada.next();
+        System.out.println("Agregue el audio");
+        String audio = entrada.next();
         parlante.setParlanteDerecho("Su parlante está sonandola canción " + audio);
+        System.out.println(parlante.getParlanteDerecho());
+
     }
 
     public void sonarParlanteIzquierdo() {
-         String audio=entrada.next();
+        System.out.println("Agregue el audio");
+        String audio = entrada.next();
         parlante.setParlanteIzquierdo("Su parlante está sonandola canción " + audio);
+        System.out.println(parlante.getParlanteIzquierdo());
     }
 
     public void sonarParlanteSubwoofer() {
-         String audio=entrada.next();
+        System.out.println("Agregue el audio");
+        String audio = entrada.next();
         parlante.setParlanteSubwoofer("Su parlante está sonando la canción " + audio);
+        System.out.println(parlante.getParlanteSubwoofer());
 
     }
 
@@ -121,15 +127,15 @@ public class EquipoSonidoVista {
     public void mostrarLista() {
         for (int i = 0; i < 1000; i++) {
             if (listaAudios[i].equals("") == false) {
-                System.out.println(listaAudios[i]); 
+                System.out.println(listaAudios[i]);
             }
 
         }
     }
 
     public boolean agregarAudio() {
-        
-        String audio=entrada.next();
+
+        String audio = entrada.next();
         boolean resultado = false;
         if (cont < maxAudios) {
             listaAudios[cont] = audio;
@@ -158,16 +164,19 @@ public class EquipoSonidoVista {
         System.out.println("6.Eliminar audio");
         System.out.println("7.Salir");
     }
-    public void menuParlante(){
-         System.out.println("1.Parlante derecho");
+
+    public void menuParlante() {
+        System.out.println("1.Parlante derecho");
         System.out.println("2.Parlante izquierdo");
         System.out.println("3.Parlante subwoofer");
     }
-    public void menuParlantes(){
-         System.out.println("1.Manejar volumen");
-        System.out.println("2.Sonar parlante");
+
+    public void menuParlantes() {
+        System.out.println("1.Sonar parlante");
+        System.out.println("2.Manejar volumen");
         System.out.println("3.Deshabilitar parlante");
     }
+
     public int menu() {
         int r;
         r = entrada.nextInt();
