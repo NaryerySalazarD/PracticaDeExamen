@@ -12,9 +12,43 @@ package SegundoExamenParcial;
 public class EquipoSonidoControlador {
 
      boolean modoGrafico =true;
+
+    
     public void iniciar(){
        EquipoSonido n=new EquipoSonido();
-       EquipoSonidoControlador k=new EquipoSonidoControlador(n,modoGrafico);
-        
+       EquipoSonidoVista k=new EquipoSonidoVista(n);
+       k.getOpcion();
+       if(k.menu()==1){
+           k.menuParlante();
+           if(k.menu()==1){
+               k.sonarParlanteDerecho(audio);
+               k.volumenParlanteDerecho();
+               k.deshabilitarParlanteDerecho();
+           }
+           else if(k.menu()==2){
+               
+           }
+             else{
+               
+           }
+       }
+       else if(k.menu()==2){
+           
+       }
+        else if(k.menu()==3){
+           
+       }
+        else if(k.menu()==4){
+           
+       }
+        else if(k.menu()==5){
+           
+       }
+        else if(k.menu()==6){
+           
+       }
+        else {
+           
+       }
     }
 }

@@ -12,7 +12,7 @@ package SegundoExamenParcial;
 public class Tester {
     public static void main (String a[]){
 
- EquipoSonido controlador = new EquipoSonido();
+ EquipoSonidoControlador controlador = new EquipoSonidoControlador();
  controlador.iniciar();
  }
 

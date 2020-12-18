@@ -6,6 +6,7 @@
 package SegundoExamenParcial;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,8 +20,9 @@ public class EquipoSonidoVista {
     Scanner entrada = new Scanner(System.in);
     EquipoSonido parlante;
 
-    public EquipoSonidoVista(EquipoSonido elijaParlante) {
-        this.parlante = elijaParlante;
+    public EquipoSonidoVista(EquipoSonido parlante) {
+        this.parlante = parlante;
+
     }
 
     public void ListaReproduccion() {
@@ -114,12 +116,12 @@ public class EquipoSonidoVista {
     }
 
     public void mostrarLista() {
-        for (int i = 0; i < cont; i++) {
-            if (listaAudios[i] != null) {
-                System.out.println(listaAudios[i]);
+        for (int i = 0; i < 1000; i++) { //para cada espacio del arreglo
+            if (listaAudios[i].equals("") == false) {
+                System.out.println(listaAudios[i]); //imprime el audio en posición i
             }
-        }
 
+        }
     }
 
     public boolean agregarAudio(String audio) {
@@ -140,6 +142,26 @@ public class EquipoSonidoVista {
             resultado = true;
         }
         return resultado;
+    }
+
+    public void getOpcion() {
+        System.out.println("1.Elgir un parlante");
+        System.out.println("2.Reproduce la lista en orden");
+        System.out.println("3.Reproduce la lista de forma aleatoria");
+        System.out.println("4.Muestra la lista completa");
+        System.out.println("5.Agregar audio");
+        System.out.println("6.Eliminar audio");
+        System.out.println("7.Salir");
+    }
+    public void menuParlante(){
+         System.out.println("1.Parlante derecho");
+        System.out.println("2.Parlante izquierdo");
+        System.out.println("3.Parlante subwoofer");
+    }
+    public int menu() {
+        int r;
+        r = entrada.nextInt();
+        return r;
     }
 
     public Scanner getEntrada() {
