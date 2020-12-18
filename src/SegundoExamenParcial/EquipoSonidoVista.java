@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class EquipoSonidoVista {
 
+    String conta;
     int cont;
     int maxAudios = 1000;
     String[] listaAudios = new String[maxAudios];
@@ -26,7 +27,7 @@ public class EquipoSonidoVista {
 
     public void ListaReproduccion() {
         for (int i = 0; i < 1000; i++) {
-            listaAudios[i] = "";
+            listaAudios[i] = " ";
         }
     }
 
@@ -113,7 +114,11 @@ public class EquipoSonidoVista {
     }
 
     public void aleatorio() {
-
+     for (int i = 0; i < Math.random(); i++) {
+            if (listaAudios[i] != null) {
+                System.out.println(listaAudios[i]);
+            }
+        }
     }
 
     public void orden() {
@@ -134,12 +139,12 @@ public class EquipoSonidoVista {
     }
 
     public boolean agregarAudio() {
-
+        System.out.println("Ingrese su audio:");
         String audio = entrada.next();
         boolean resultado = false;
         if (cont < maxAudios) {
             listaAudios[cont] = audio;
-            cont++;
+            
             resultado = true;
         }
         return resultado;

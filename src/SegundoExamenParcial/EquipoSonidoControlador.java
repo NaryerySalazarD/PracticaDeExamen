@@ -11,11 +11,12 @@ package SegundoExamenParcial;
  */
 public class EquipoSonidoControlador {
 
-    boolean modoGrafico = true;
+ 
 
     public void iniciar() {
         EquipoSonido n = new EquipoSonido();
         EquipoSonidoVista k = new EquipoSonidoVista(n);
+        k.ListaReproduccion();
         k.getOpcion();
         while(true){
         switch (k.menu()) {
