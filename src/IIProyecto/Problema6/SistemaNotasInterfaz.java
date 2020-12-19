@@ -51,7 +51,6 @@ public class SistemaNotasInterfaz {
 
             JOptionPane.showMessageDialog(null, e.getNota());
             JOptionPane.showMessageDialog(null,e.getPuntosObtenidos());
-            //e.getAlumno().imprimirPadreFamiliar();
             o.mostrarExamenesIN();
         } else {
           JOptionPane.showMessageDialog(null,"No hay suficiente espacio.");

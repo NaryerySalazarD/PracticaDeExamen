@@ -47,9 +47,6 @@ public class SistemaNotasReporte {
     }
 
     public void generarReporteAlumnosConNotaInferiorA(int nota) {
-        Examenes e = new Examenes();
-
-        nota = e.getNota();
         int cont = maxRegistros;
         for (int i = 0; i < cont; i++) {
             if (nota < 70) {
@@ -59,14 +56,17 @@ public class SistemaNotasReporte {
         }
 
     }
-    String propiedad = "nota";
+    
 
     public void generarReporteTodosExamenesOrdenadosPor(String propiedad) {
 
         if (propiedad.equals("nota")) {
-
+            
+            padre.mostrardatos();
+                padre.imprimirPadreFamiliar();
         } else if (propiedad.equals("puntosTotales")) {
-
+            padre.mostrardatos();
+                padre.imprimirPadreFamiliar();
         }
 
     }
