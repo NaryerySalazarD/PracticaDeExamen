@@ -64,10 +64,11 @@ public class SistemaNotas {
             }
         }
     }
-     public void mostrarExamenesGR() {
+
+    public void mostrarExamenesGR() {
         for (int i = 0; i < cont; i++) {
             if (examenes[i] != null) {
-                JOptionPane.showMessageDialog(null,examenes[i].toString());
+                JOptionPane.showMessageDialog(null, examenes[i].toString());
             }
         }
     }

@@ -16,11 +16,31 @@ public class SistemaNotasInterfaz {
 
     Scanner s = new Scanner(System.in);
     boolean modoGrafico;
-    SistemaNotas o;
+    SistemaNotas sistema;
+    SistemaNotasReporte reporte = new SistemaNotasReporte();
 
     public SistemaNotasInterfaz(SistemaNotas iniciado, boolean modoGrafico) {
         this.modoGrafico = modoGrafico;
-        this.o = iniciado;
+        this.sistema = iniciado;
+    }
+
+    public void op1() {
+        reporte.generarReporteTodosExamenes();
+    }
+
+    public void op2() {
+        reporte.generarReporteTodosAlumnos();
+    }
+
+    public void op3() {
+
+        reporte.generarReporteAlumnosConNotaInferiorA(70);
+    }
+
+    public void op4() {
+        System.out.println("Escriba la propiedad que desea");
+        String n = s.next();
+        reporte.generarReporteTodosExamenesOrdenadosPor(n);
     }
 
     public void gráfico() {
@@ -47,14 +67,17 @@ public class SistemaNotasInterfaz {
         String apellidosPadre = JOptionPane.showInputDialog(null, mensaje);
         PadreFamiliar p1 = new PadreFamiliar(nombrePadre, apellidosPadre);
         alum.setPadre(p1);
-        if (o.agregarEx(e)) {
 
-            JOptionPane.showMessageDialog(null, e.getNota());
-            JOptionPane.showMessageDialog(null,e.getPuntosObtenidos());
-            o.mostrarExamenesIN();
-        } else {
-          JOptionPane.showMessageDialog(null,"No hay suficiente espacio.");
-        }
+        mensaje = "¿Qué desea hacer?";
+        JOptionPane.showMessageDialog(null, mensaje);
+        mensaje = "1.Generar Reporte de todos los exámenes";
+        JOptionPane.showMessageDialog(null, mensaje);
+        mensaje = "2.Generar reporte de todos los alumnos";
+        JOptionPane.showMessageDialog(null, mensaje);
+        mensaje = "3.Generar reporte de todos los alumnos con nota inferior a 70";
+        JOptionPane.showMessageDialog(null, mensaje);
+        mensaje = "4.Generar reporte de todos los exámenes ordenados por una propiedad";
+        JOptionPane.showMessageDialog(null, mensaje);
 
     }
 
@@ -75,7 +98,7 @@ public class SistemaNotasInterfaz {
         int puntosTotales = s.nextInt();
         System.out.println("Digite puntos obtenidos:");
         int puntosObtenidos = s.nextInt();
-
+        Examenes e = new Examenes(nota, null, puntosTotales, puntosObtenidos, null);
         //Padre familiar
         System.out.println("Digite nombre padre:");
         String nombrePadre = s.next();
@@ -92,6 +115,19 @@ public class SistemaNotasInterfaz {
         try {
             r = Integer.parseInt(JOptionPane.showInputDialog("1. Modo gráfico\n2. Modo interativo"));
             if ((r < 1) || (r > 2)) {
+                throw new Exception("# de opcion  es inválido");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        return r;
+    }
+
+    public int menu() {
+        int r = 0;
+        try {
+            r = Integer.parseInt(JOptionPane.showInputDialog("1.Generar Reporte de todos los exámenes\\n2.Generar reporte de todos los alumnos\\n3.Generar reporte de todos los alumnos con nota inferior a 70\\n4.Generar reporte de todos los exámenes ordenados por una propiedad"));
+            if ((r < 1) || (r > 4)) {
                 throw new Exception("# de opcion  es inválido");
             }
         } catch (Exception e) {

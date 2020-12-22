@@ -12,7 +12,7 @@ package IIProyecto.Problema6;
 public class SistemaNotasControlador {
 
     boolean modoGrafico = true;
-
+   
     public void iniciar() {
         SistemaNotas nota = new SistemaNotas();
         SistemaNotasInterfaz nv = new SistemaNotasInterfaz(nota, modoGrafico);
@@ -22,7 +22,19 @@ public class SistemaNotasControlador {
             switch (op) {
                 case 1:
                     nv.gráfico();
-
+                    op=nv.menu();
+                    if(op==1){
+                      nv.op1();
+                    }
+                    else if(op==2){
+                      nv.op2();
+                    }
+                     else if(op==3){
+                         nv.op3();
+                    }
+                     else {
+                      nv.op4();
+                    }
                     break;
                 case 2:
                     nv.interativo();

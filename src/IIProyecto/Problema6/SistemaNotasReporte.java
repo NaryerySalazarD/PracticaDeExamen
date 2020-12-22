@@ -20,24 +20,23 @@ public class SistemaNotasReporte {
     SistemaNotas sistema = new SistemaNotas();
     Alumno padre = new Alumno();
 
-    public SistemaNotasReporte() {
+    public void sistemaNotasReporte() {
         JFrame f = new JFrame("REPORTES");
-
+       
         JPanel panel = new JPanel();
 
         panel.setBounds(40, 80, 200, 200);
 
         panel.setBackground(Color.CYAN);
-
+        
         f.add(panel);
         f.setSize(400, 400);
 
         f.setLayout(null);
 
         f.setVisible(true);
-
+        
     }
-
     public void generarReporteTodosExamenes() {
         sistema.mostrarExamenesIN();
     }
@@ -56,17 +55,16 @@ public class SistemaNotasReporte {
         }
 
     }
-    
 
     public void generarReporteTodosExamenesOrdenadosPor(String propiedad) {
 
         if (propiedad.equals("nota")) {
-            
+
             padre.mostrardatos();
-                padre.imprimirPadreFamiliar();
+            padre.imprimirPadreFamiliar();
         } else if (propiedad.equals("puntosTotales")) {
             padre.mostrardatos();
-                padre.imprimirPadreFamiliar();
+            padre.imprimirPadreFamiliar();
         }
 
     }

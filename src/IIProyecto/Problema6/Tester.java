@@ -5,25 +5,17 @@
  */
 package IIProyecto.Problema6;
 
-
-   
 /**
  *
  * @author NaryerySD
  */
 public class Tester {
-   
- 
 
- 
-     public static void main(String[] args){  
+    public static void main(String[] args) {
 
-    SistemaNotasControlador n=new SistemaNotasControlador();
-   n.iniciar();
+        SistemaNotasControlador n = new SistemaNotasControlador();
+        n.iniciar();
 
-      
+    }
 
-     }
-
-     
 }
